@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="一人語り・週1投稿・登録者数百人のYouTubeチャンネルが、まず何からやるか。2025-2026年の実証データにもとづく調査報告。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="天風ラジオ 成長設計">
+<meta property="og:description" content="一人語り・週1投稿・登録者数百人のYouTubeチャンネルが、まず何からやるか。2025-2026年の実証データにもとづく調査報告。">
+<meta property="og:url" content="https://tomobook-hub.github.io/tempu-radio/plan/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<title>天風ラジオ 成長設計</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#F5F5F2;
+  --raised:#FFFFFF;
+  --sunk:#EDEDE8;
+  --ink:#1A1D26;
+  --muted:#636875;
+  --faint:#8B909C;
+  --line:#DDDCD5;
+  --line-strong:#C4C3BA;
+  --indigo:#2E4A7D;
+  --indigo-soft:#5C77AC;
+  --indigo-wash:#E7ECF5;
+  --gold:#8F6A1E;
+  --gold-wash:#F3EBD8;
+  --crimson:#8E3535;
+  --crimson-wash:#F4E4E2;
+  --green:#3D6B4A;
+  --green-wash:#E4EDE5;
+
+  --f-display:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+
+  --w:min(720px,calc(100% - 3rem));
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14161C;
+    --raised:#1B1E26;
+    --sunk:#101218;
+    --ink:#E7E7E2;
+    --muted:#A0A5B0;
+    --faint:#7B818E;
+    --line:#2B2F3A;
+    --line-strong:#3D424F;
+    --indigo:#9DB3DD;
+    --indigo-soft:#7D93C4;
+    --indigo-wash:#1D2536;
+    --gold:#D6AC55;
+    --gold-wash:#2B2415;
+    --crimson:#DE9191;
+    --crimson-wash:#2E1C1C;
+    --green:#8DC09C;
+    --green-wash:#18251C;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14161C;
+  --raised:#1B1E26;
+  --sunk:#101218;
+  --ink:#E7E7E2;
+  --muted:#A0A5B0;
+  --faint:#7B818E;
+  --line:#2B2F3A;
+  --line-strong:#3D424F;
+  --indigo:#9DB3DD;
+  --indigo-soft:#7D93C4;
+  --indigo-wash:#1D2536;
+  --gold:#D6AC55;
+  --gold-wash:#2B2415;
+  --crimson:#DE9191;
+  --crimson-wash:#2E1C1C;
+  --green:#8DC09C;
+  --green-wash:#18251C;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.85;
+  margin:0;
+  padding:0 0 6rem;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:var(--w);margin:0 auto}
+
+/* ---------- masthead ---------- */
+.mast{
+  border-bottom:1px solid var(--line-strong);
+  padding:3.5rem 0 2rem;
+  margin-bottom:3rem;
+}
+.eyebrow{
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--indigo);font-weight:700;margin:0 0 1.1rem;
+}
+h1{
+  font-family:var(--f-display);
+  font-weight:900;
+  font-size:clamp(2rem,6vw,2.9rem);
+  line-height:1.3;
+  letter-spacing:.01em;
+  margin:0 0 1rem;
+  text-wrap:balance;
+}
+.standfirst{
+  font-size:1.03rem;color:var(--muted);margin:0 0 1.8rem;max-width:34em;
+}
+.meta{
+  display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;
+  font-size:.82rem;color:var(--faint);
+  border-top:1px solid var(--line);padding-top:1.1rem;
+}
+.meta b{color:var(--muted);font-weight:500}
+
+/* ---------- sections ---------- */
+section{margin:0 0 3.5rem}
+h2{
+  font-family:var(--f-display);
+  font-weight:700;
+  font-size:1.6rem;line-height:1.45;
+  margin:0 0 .4rem;
+  text-wrap:balance;
+}
+.sect-note{color:var(--muted);font-size:.92rem;margin:0 0 1.6rem;max-width:36em}
+h3{font-size:1.02rem;font-weight:700;margin:2rem 0 .6rem}
+p{margin:0 0 1rem}
+a{color:var(--indigo);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:2px}
+strong{font-weight:700}
+
+/* ---------- opening answer ---------- */
+.answer{
+  background:var(--raised);
+  border:1px solid var(--line);
+  border-top:3px solid var(--indigo);
+  padding:1.6rem 1.5rem 1.4rem;
+  margin:0 0 3.5rem;
+}
+.answer .ahead{
+  font-family:var(--f-display);font-weight:700;font-size:1.25rem;
+  margin:0 0 .5rem;line-height:1.5;
+}
+.answer .asub{font-size:.92rem;color:var(--muted);margin:0 0 1.3rem;max-width:34em}
+.steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.steps li{
+  display:grid;grid-template-columns:1.8rem 1fr;gap:0 .9rem;
+  padding:.9rem 0;border-top:1px solid var(--line);
+}
+.steps li:first-child{border-top:none;padding-top:0}
+.steps .n{
+  font-family:var(--f-display);font-weight:900;font-size:1.15rem;
+  color:var(--indigo);line-height:1.5;font-variant-numeric:tabular-nums;
+}
+.steps .what{font-weight:700;font-size:1rem;margin:0 0 .2rem}
+.steps .how{font-size:.9rem;color:var(--muted);margin:0}
+.when{
+  display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;
+  color:var(--indigo);background:var(--indigo-wash);padding:.1rem .45rem;
+  border-radius:2px;margin-left:.5rem;vertical-align:.1em;white-space:nowrap;
+}
+.answer .after{
+  margin:1.3rem 0 0;padding-top:1rem;border-top:1px solid var(--line);
+  font-size:.88rem;color:var(--faint);
+}
+
+/* ---------- priority list ---------- */
+.prio{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.prio > li{
+  display:grid;
+  grid-template-columns:2.6rem 1fr;
+  gap:0 1rem;
+  padding:1.4rem 0;
+  border-top:1px solid var(--line);
+}
+.prio > li:last-child{border-bottom:1px solid var(--line)}
+.rank{
+  font-family:var(--f-display);font-weight:900;font-size:1.5rem;
+  color:var(--indigo);line-height:1.2;font-variant-numeric:tabular-nums;
+}
+.prio-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .7rem;margin-bottom:.35rem}
+.prio-title{font-weight:700;font-size:1.06rem}
+.prio p{margin:0 0 .5rem;color:var(--muted);font-size:.94rem}
+.prio p:last-child{margin-bottom:0}
+.prio .body{grid-column:2}
+
+/* ---------- chips ---------- */
+.chip{
+  display:inline-block;font-size:.7rem;font-weight:700;
+  letter-spacing:.06em;padding:.15rem .5rem;border-radius:2px;
+  white-space:nowrap;line-height:1.6;
+}
+.chip-lg{background:var(--gold-wash);color:var(--gold)}
+.chip-md{background:var(--indigo-wash);color:var(--indigo)}
+.chip-sm{background:var(--sunk);color:var(--faint)}
+.chip-no{background:var(--crimson-wash);color:var(--crimson)}
+.cost{font-size:.72rem;color:var(--faint);letter-spacing:.04em}
+
+/* evidence grade */
+.ev{
+  font-size:.68rem;font-weight:700;letter-spacing:.05em;
+  padding:.05rem .38rem;border-radius:2px;vertical-align:.08em;
+  border:1px solid currentColor;white-space:nowrap;
+}
+.ev-a{color:var(--green)}
+.ev-b{color:var(--indigo-soft)}
+.ev-c{color:var(--crimson)}
+
+/* ---------- title rewrite ---------- */
+.rewrite{display:flex;flex-direction:column;gap:1rem;margin:1.5rem 0}
+.tcard{
+  border:1px solid var(--line);
+  border-left:3px solid var(--line-strong);
+  padding:1rem 1.1rem;background:var(--raised);
+}
+.tcard.good{border-left-color:var(--indigo)}
+.tcard.bad{border-left-color:var(--crimson)}
+.tlabel{
+  font-size:.72rem;letter-spacing:.1em;font-weight:700;color:var(--faint);
+  margin-bottom:.55rem;display:flex;justify-content:space-between;gap:1rem;
+}
+.tcard.bad .tlabel span:first-child{color:var(--crimson)}
+.tcard.good .tlabel span:first-child{color:var(--indigo)}
+.tstring{
+  font-size:1.08rem;font-weight:500;line-height:1.7;
+  word-break:break-all;margin-bottom:.6rem;
+}
+.zone{
+  background:var(--indigo-wash);
+  box-shadow:0 1px 0 var(--indigo-soft);
+  padding:.05em 0;
+}
+.tnote{font-size:.84rem;color:var(--muted);margin:0}
+.legend{font-size:.78rem;color:var(--faint);display:flex;align-items:center;gap:.5rem}
+.legend i{display:inline-block;width:1.4rem;height:.7rem;background:var(--indigo-wash);box-shadow:0 1px 0 var(--indigo-soft)}
+
+/* ---------- tables ---------- */
+.scroller{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:30rem;background:var(--raised)}
+th,td{padding:.7rem .9rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{
+  background:var(--sunk);font-size:.74rem;letter-spacing:.08em;
+  color:var(--muted);font-weight:700;white-space:nowrap;border-bottom:1px solid var(--line-strong);
+}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.key{font-weight:700}
+
+/* ---------- split verdict ---------- */
+.split{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:1.4rem 0}
+@media(min-width:620px){.split{grid-template-columns:1fr 1fr}}
+.split > div{background:var(--raised);padding:1.1rem 1.2rem}
+.split h4{
+  margin:0 0 .6rem;font-size:.78rem;letter-spacing:.1em;font-weight:700;
+}
+.split .fix h4{color:var(--indigo)}
+.split .vary h4{color:var(--gold)}
+.split ul{margin:0;padding-left:1.1rem;font-size:.92rem;color:var(--muted)}
+.split li{margin-bottom:.3rem}
+
+/* ---------- callouts ---------- */
+.callout{
+  border:1px solid var(--line);border-top:3px solid var(--gold);
+  background:var(--gold-wash);padding:1.2rem 1.3rem;margin:1.6rem 0;
+}
+.callout .ct{font-weight:700;margin:0 0 .4rem;color:var(--gold);font-size:.95rem}
+.callout p{margin:0;font-size:.93rem;color:var(--ink)}
+.callout p + p{margin-top:.6rem}
+
+.danger{border-top-color:var(--crimson);background:var(--crimson-wash)}
+.danger .ct{color:var(--crimson)}
+
+/* ---------- myth list ---------- */
+.myths{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-direction:column;gap:0}
+.myths li{border-top:1px solid var(--line);padding:.9rem 0}
+.myths li:last-child{border-bottom:1px solid var(--line)}
+.myth-claim{font-weight:700;font-size:.95rem;margin:0 0 .25rem}
+.myth-claim::before{content:"×";color:var(--crimson);font-weight:700;margin-right:.5rem}
+.myth-why{margin:0;font-size:.88rem;color:var(--muted)}
+
+/* ---------- sources ---------- */
+.srcs{columns:2 14rem;column-gap:2rem;font-size:.84rem;margin-top:1rem}
+.srcs a{display:block;margin-bottom:.45rem;break-inside:avoid;color:var(--indigo)}
+
+.limits{font-size:.88rem;color:var(--muted)}
+.limits ul{padding-left:1.1rem;margin:.6rem 0 0}
+.limits li{margin-bottom:.35rem}
+
+hr.rule{border:none;border-top:1px solid var(--line-strong);margin:3.5rem 0}
+
+footer{
+  border-top:1px solid var(--line);padding-top:1.4rem;margin-top:3rem;
+  font-size:.8rem;color:var(--faint);
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+[hidden]{display:none!important}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--sunk);padding:.1em .35em;border-radius:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <p class="eyebrow">調査報告 ／ 2025–2026年の実証データ</p>
+  <h1>天風ラジオ 成長設計</h1>
+  <p class="standfirst">「まず何をしましょうか」への答えから始めます。一人語り・8〜12分・週1投稿・登録者数百人規模のチャンネルに、いま実際に効く手を優先順に。根拠のある数字だけを採用し、出所の怪しい通説は分けて隔離しました。</p>
+  <div class="meta">
+    <span><b>調査日</b> 2026年9月</span>
+    <span><b>対象</b> 日本語・精神哲学／自己啓発</span>
+    <span><b>手法</b> Web調査 約130件（日英）</span>
+  </div>
+</header>
+
+<div class="answer">
+  <p class="ahead">まず何からやるか</p>
+  <p class="asub">動画の作り方は変えません。<strong>すでにある動画の「外側」を直すだけ</strong>で、今いちばん大きな穴がふさがります。上から3つ、この順番で。</p>
+
+  <ol class="steps">
+    <li>
+      <span class="n">1</span>
+      <div>
+        <p class="what">タイトルに「中村天風」を入れる<span class="when">今日・30分</span></p>
+        <p class="how">いまのタイトルには<strong>検索される言葉が1つも入っていません</strong>。だから検索から人が来ない。既存の動画すべて、先頭に「中村天風」を足して、<code>#70</code> は末尾へ、<code>‼️</code> は削除。動画は一切いじりません。</p>
+      </div>
+    </li>
+    <li>
+      <span class="n">2</span>
+      <div>
+        <p class="what">チャンネルの言語を「日本語」に設定する<span class="when">今日・5分</span></p>
+        <p class="how">設定し忘れていると、YouTubeの自動翻訳・自動吹き替えが誤作動します。1箇所チェックするだけです。</p>
+      </div>
+    </li>
+    <li>
+      <span class="n">3</span>
+      <div>
+        <p class="what">サムネイルの「型」を3つ決める<span class="when">今週・半日</span></p>
+        <p class="how">毎回ゼロから作るのをやめます。<strong>色・書体・お名前の位置は固定</strong>し、<strong>言葉と構図だけ毎回変える</strong>。この型を3つ作って回すだけで、以後の制作も楽になります。</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="after">この3つが終わってから、テロップと字幕の見直し（効果は大きいですが、作り方が変わります）に進んでください。詳細は以下。</p>
+</div>
+
+<section>
+  <h2>くわしい理由と、その次の一手</h2>
+  <p class="sect-note">上の3つを含めた優先順位の全体像です。5番目まで押さえれば十分です。</p>
+
+  <ol class="prio">
+    <li>
+      <span class="rank">1</span>
+      <div class="body">
+        <div class="prio-head">
+          <span class="prio-title">タイトルから <code>#70</code> と <code>‼️</code> を外す</span>
+          <span class="chip chip-lg">効果 大</span>
+          <span class="cost">コスト 極小</span>
+        </div>
+        <p>現行タイトルには<strong>検索される言葉が1つも入っていません</strong>。だから検索から人が来ません。話数を先頭に置くと新規視聴者が敬遠し、長尺タイトルの絵文字は再生数を下げます。</p>
+        <p><span class="ev ev-a">A 実証</span> 30万本の分析で数字入りタイトルは再生数 −11%／絵文字は長尺で −11%（2つの独立した大規模データが一致）</p>
+      </div>
+    </li>
+    <li>
+      <span class="rank">2</span>
+      <div class="body">
+        <div class="prio-head">
+          <span class="prio-title">サムネは「一部だけ」統一する</span>
+          <span class="chip chip-lg">効果 大</span>
+          <span class="cost">コスト 中</span>
+        </div>
+        <p>統一か変化かの二択ではありません。<strong>識別する部分は固定し、目を引く部分は毎回変える</strong>。レイアウトを3種類作って回すのが最適解です。</p>
+        <p><span class="ev ev-a">A 実証</span> YouTube公式が「統一感のあるブランディング」をコア視聴者育成策として明記／<span class="ev ev-b">B 事例</span> ブレイクアウト500本の勝ち筋はテンプレではなく高コントラスト</p>
+      </div>
+    </li>
+    <li>
+      <span class="rank">3</span>
+      <div class="body">
+        <div class="prio-head">
+          <span class="prio-title">フルテロップをやめ、字幕ファイル（SRT）に切り替える</span>
+          <span class="chip chip-lg">効果 大</span>
+          <span class="cost">コスト 小〜中</span>
+        </div>
+        <p>焼き込みテロップは<strong>検索に一切引っかかりません</strong>。字幕ファイルだけがインデックスされます。しかも喋りと同じ文字を全部出すと、学術的には理解が下がります。</p>
+        <p><span class="ev ev-a">A 実証</span> 字幕ファイル追加で再生数 +7.32%（YouTube実測A/B）／冗長性効果は多数の研究で「非常に頑健」</p>
+      </div>
+    </li>
+    <li>
+      <span class="rank">4</span>
+      <div class="body">
+        <div class="prio-head">
+          <span class="prio-title">企画を「検索される言葉」から選ぶ</span>
+          <span class="chip chip-lg">効果 大</span>
+          <span class="cost">コスト 小</span>
+        </div>
+        <p>この規模で最も現実的な流入は<strong>検索（CTR 12.5%）</strong>で、ホーム画面（2〜6%）は最も遠い。中村天風は既に検索需要が確立しており、公式チャンネルの朗読には100万回再生超の動画もあります。この資産を使わない手はありません。</p>
+        <p><span class="ev ev-a">A 実証</span> 検索は全流入経路で最高CTR／<span class="ev ev-b">B 事例</span> 新規チャンネルは検索中心、成熟につれ関連動画・ホームへ移行</p>
+      </div>
+    </li>
+    <li>
+      <span class="rank">5</span>
+      <div class="body">
+        <div class="prio-head">
+          <span class="prio-title">投稿頻度は週1のまま。上げない</span>
+          <span class="chip chip-md">効果 中</span>
+          <span class="cost">コスト ゼロ</span>
+        </div>
+        <p>週1→隔週に<strong>半減した3ヶ月実験で、月間再生数はほぼ横ばい</strong>でした。頻度はリーチではなく「習慣とロイヤルティ」に効く指標です。空いた時間は1〜4に回してください。</p>
+        <p><span class="ev ev-b">B 事例</span> 3ヶ月の実運用実験。ただし常連コメント投稿者は離脱したため、週1は維持</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>タイトルをどう直すか</h2>
+  <p class="sect-note">スマホで省略されない上限は全角28文字。重要な語は先頭15文字以内に置くのが日本語圏の鉄則です。</p>
+
+  <p class="legend"><i></i> 先頭15文字（スマホで最初に目に入る範囲）</p>
+
+  <div class="rewrite">
+    <div class="tcard bad">
+      <div class="tlabel"><span>現行</span><span>15文字 ／ 検索語 0</span></div>
+      <p class="tstring"><span class="zone">#70「歳なんてないんだよ‼️」</span></p>
+      <p class="tnote">先頭4文字を話数が占有。誰も検索しない引用のみで、検索流入はゼロ。長尺での絵文字はマイナス。</p>
+    </div>
+
+    <div class="tcard good">
+      <div class="tlabel"><span>改善案 A ／ 推奨</span><span>27文字 ／ 先頭5文字に検索語</span></div>
+      <p class="tstring"><span class="zone">中村天風「歳なんてないん</span>だよ」年齢は思い込み #70</p>
+      <p class="tnote">最も検索される固有名詞を先頭へ。引用の感情フックはそのまま残し、話数は末尾に退避。</p>
+    </div>
+
+    <div class="tcard good">
+      <div class="tlabel"><span>改善案 B</span><span>26文字 ／ 先頭7文字に検索語</span></div>
+      <p class="tstring"><span class="zone">年齢は思い込み｜「歳なんてない</span>」という生き方 #70</p>
+      <p class="tnote">固有名詞ではなく悩みワードで入口を作る型。天風を知らない層に届く。</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p class="ct">話数は捨てなくていい</p>
+    <p>実際に機能している日本語の語りチャンネルは <code>#845 …（本文）…【睡眠用/作業用/聞き流し】</code> のように、<strong>話数を残しつつ末尾に検索される用途語を足しています</strong>。消すのではなく、位置を変えるだけです。</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>サムネイル ── 統一か、毎回変えるか</h2>
+  <p class="sect-note">この問いを直接検証したA/Bテストは日英どちらにも存在しませんでした。ただし間接証拠を統合すると、答えは1つに収束します。</p>
+
+  <div class="split">
+    <div class="fix">
+      <h4>固定する（識別レイヤー）</h4>
+      <ul>
+        <li>フォント 1〜2種</li>
+        <li>配色 3色まで</li>
+        <li>文字の縁取り・帯の処理</li>
+        <li>話者やロゴの定位置</li>
+        <li>落ち着いたトーン</li>
+      </ul>
+    </div>
+    <div class="vary">
+      <h4>毎回変える（フックレイヤー）</h4>
+      <ul>
+        <li>主役となる言葉</li>
+        <li>構図</li>
+        <li>写真</li>
+        <li>色の当て方</li>
+        <li>背景の明暗</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>最大のリスクは「統一 vs 変化」ではなく、<strong>毎回同じ文言・同じ構図</strong>です。#70・#71・#72 が全部同じレイアウトで文言だけ差し替わる状態が、ホーム画面で最も見飛ばされます。<strong>レイアウトを3パターン用意してローテーション</strong>するのが、両方の利得を取る唯一の設計です。</p>
+
+  <h3>このジャンルで効く具体条件</h3>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>項目</th><th>結論</th><th>根拠</th></tr></thead>
+      <tbody>
+        <tr><td class="key">明るさ</td><td><strong>暗いサムネは一貫して低調。</strong>スピリチュアル系にありがちな暗色・低彩度は要注意</td><td class="num"><span class="ev ev-a">A</span> 30万本</td></tr>
+        <tr><td class="key">コントラスト</td><td>ブレイクアウト500本の56%が高コントラスト。「顔 or 高コントラスト」で89%</td><td class="num"><span class="ev ev-b">B</span> 500本</td></tr>
+        <tr><td class="key">文字量</td><td>1行 9〜13文字、画面の1/3以下。日本語圏は<strong>文字数より占有面積</strong>で測るのが正解</td><td class="num"><span class="ev ev-b">B</span> 上位30本</td></tr>
+        <tr><td class="key">顔出し</td><td><strong>必須ではない。</strong>顔ありと顔なしは同程度で、顔が効くのは登録者20万人超から</td><td class="num"><span class="ev ev-a">A</span> 30万本</td></tr>
+        <tr><td class="key">想定画面</td><td>日本のシニア視聴はスマホ中心（米国はTV中心）。小画面前提で設計</td><td class="num"><span class="ev ev-b">B</span> 実務分析</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p class="ct">A/Bテスト機能は、今は使えません</p>
+    <p>YouTube純正の Test &amp; Compare は<strong>1案あたり1,000〜5,000インプレッション、1本あたり1万再生以上</strong>が実用ラインです。それ未満では「判定不能」で2週間を失います。代わりに<strong>サムネを差し替えて28日前後で比較</strong>してください。</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>テロップ ── フルから「要点」へ</h2>
+  <p class="sect-note">この論点では、広く信じられている根拠が誤用であることが判明しました。</p>
+
+  <div class="callout danger">
+    <p class="ct">「視聴者の85〜92%が音声オフ」は使えません</p>
+    <p>初出は2016年の Digiday で、<strong>Facebook の自動再生動画に関するパブリッシャーの自己申告値</strong>です。Facebook 自身も一度も追認していません。YouTube の本編視聴は「タップして音ありで再生する」のが原則で、SNSフィードの統計は構造的に当てはまりません。</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>手法</th><th>維持率への効果</th><th>検索への効果</th><th>編集コスト</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="key">焼き込みフルテロップ</td>
+          <td><strong>測った研究が存在しない</strong>。学術的にはむしろ逆風（冗長性効果）</td>
+          <td><strong>ゼロ</strong>（画像として埋め込まれ読み取れない）</td>
+          <td>最大</td>
+        </tr>
+        <tr>
+          <td class="key">要点テロップ（3〜5割）</td>
+          <td>冗長性効果の例外条件を満たす。理論的に最も妥当</td>
+          <td>ゼロ</td>
+          <td>小</td>
+        </tr>
+        <tr>
+          <td class="key">字幕ファイル（SRT）</td>
+          <td>直接の維持率データなし</td>
+          <td><strong>再生数 +7.32%</strong>（YouTube実測A/B）。字幕内の語で検索4位に表示された実験あり</td>
+          <td>小</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>やること</h3>
+  <p>焼き込みは<strong>喋りの3〜5割の要点だけ</strong>に絞り、<strong>日本語SRTを毎回アップロード</strong>する。あわせて<strong>チャンネルと動画の既定言語を「日本語」に設定</strong>してください。自動吹き替え（全クリエイター・27言語に提供済み、2025年12月時点で1日600万人超が視聴）の品質は、言語設定の誤りで崩れると公式が明記しています。</p>
+
+  <p>精神哲学ジャンルは<strong>固有名詞・古語・東洋思想語彙</strong>が多く、自動音声認識が最も苦手とする領域です。正確な日本語字幕を自分で用意しておくことが、検索・翻訳字幕・将来の多言語展開すべての土台になります。</p>
+
+  <div class="callout">
+    <p class="ct">日本固有の事情：倍速視聴</p>
+    <p>「教養・学習・自己研鑽」ジャンルは<strong>6割超が倍速視聴</strong>（NTTドコモ モバイル社会研究所 2024年9月）。倍速では聞き取りが落ちるため、テロップが保険として働く余地はあります。ただし<strong>倍速 × テロップ有無 × 維持率を測った研究は存在しません</strong>。</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>数値の目安</h2>
+  <p class="sect-note">この規模・このジャンルで「どこを見ればよいか」。診断は インプレッション → CTR → 維持率 の順に。</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>指標</th><th>目安</th><th>根拠</th></tr></thead>
+      <tbody>
+        <tr><td class="key">CTR（全体）</td><td class="num">全動画の半数が <strong>2〜10%</strong></td><td class="num"><span class="ev ev-a">A</span> YouTube公式</td></tr>
+        <tr><td class="key">CTR（登録者1,000人未満・日本）</td><td class="num">8〜15%（拡大すると下がるのが正常）</td><td class="num"><span class="ev ev-b">B</span></td></tr>
+        <tr><td class="key">維持率（8〜12分・語り系）</td><td class="num"><strong>40〜55%</strong></td><td class="num"><span class="ev ev-b">B</span></td></tr>
+        <tr><td class="key">冒頭30秒の通過率</td><td class="num">70%超で良好／50%未満はフック失敗</td><td class="num"><span class="ev ev-b">B</span></td></tr>
+        <tr><td class="key">終了画面クリック率</td><td class="num">3〜7%が健全、8%超で好循環</td><td class="num"><span class="ev ev-b">B</span></td></tr>
+        <tr><td class="key">検索の平均CTR</td><td class="num"><strong>12.5%</strong>（全流入経路で最高）</td><td class="num"><span class="ev ev-a">A</span></td></tr>
+        <tr><td class="key">ホーム画面の平均CTR</td><td class="num">2〜6%（最も低い）</td><td class="num"><span class="ev ev-a">A</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout danger">
+    <p class="ct">2026年8月24日以降、「視聴回数」は前後比較できません</p>
+    <p>カウント方法が変わり、<strong>最初のフレームから1再生としてカウント</strong>されるようになりました。数値は以前より水増しされて見えます。改善の判断は必ず<strong>「エンゲージド視聴」と「平均視聴時間」</strong>で行ってください。</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>ショート動画は、やるなら段階的に</h2>
+  <p class="sect-note">18,000チャンネルの中央値比較（英語圏・2025年3月〜2026年3月）が最も信頼できるデータです。</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>ニッチ</th><th>有利な戦略</th><th>登録者数の差</th></tr></thead>
+      <tbody>
+        <tr><td class="key">Education（教育）</td><td>ロング＋ショート併用</td><td class="num"><strong>+37%</strong></td></tr>
+        <tr><td class="key">Business</td><td>ロング＋ショート併用</td><td class="num"><strong>+39%</strong></td></tr>
+        <tr><td class="key">Gaming</td><td>ロング専業</td><td class="num">+85%</td></tr>
+        <tr><td class="key">Entertainment</td><td>ロング専業</td><td class="num">+90%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>自己啓発・精神哲学は <strong>Education / Business に最も近く、ショートが有利に出ているセグメント</strong>です。ただし守るべき条件があります。</p>
+
+  <ul>
+    <li><strong>投稿本数の25〜40%が最適比率。</strong>55%を超えると全ニッチで長尺が悪化します</li>
+    <li><strong>急に比率を変えない。</strong>年度途中で30ポイント超動かしたチャンネルは、どちらのグループよりも成績が悪くなりました</li>
+    <li><strong>自動では送客されません。</strong>2025年後半にショートと長尺の推薦システムは完全分離済み。公式も「別々の推薦システム」と明言しています</li>
+    <li>送客には <strong>Related Videos機能でショートに長尺をリンク</strong>し、<strong>長尺の冒頭5〜10秒でショートの約束に直接答える</strong>（いずれもYouTube公式の推奨）</li>
+    <li><strong>ショートには焼き込みキャプションを入れる。</strong>ショートのフィードはミュート自動再生が現実で、長尺とは扱いを分けます</li>
+  </ul>
+
+  <p>なお、ショートのフィード由来の再生時間は<strong>収益化の4,000時間要件にカウントされません</strong>（登録者1,000人の要件にはカウントされます）。</p>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>使ってはいけない数字</h2>
+  <p class="sect-note">調査中に繰り返し出てきましたが、いずれも出典・手法が不明か、出所を誤用しています。日本語圏のYouTube記事は2025〜2026年にAI生成のSEO記事が激増しました。</p>
+
+  <ul class="myths">
+    <li>
+      <p class="myth-claim">顔ありサムネはCTR 2.3倍（Creator Insider 50万本データ）</p>
+      <p class="myth-why">該当する公式発言は存在しません。検証可能な30万本の分析（顔あり ≒ 顔なし）と真逆です。<strong>偽データと見なすべき</strong>。</p>
+    </li>
+    <li>
+      <p class="myth-claim">視聴者の85〜92%が音声オフ</p>
+      <p class="myth-why">2016年 Digiday の Facebook 記事。パブリッシャーの自己申告で、Facebook 自身も追認していません。</p>
+    </li>
+    <li>
+      <p class="myth-claim">一貫したブランディングでCTR +38% ／ 再生数 +154%</p>
+      <p class="myth-why">すべてAI生成風のアフィリエイト記事。手法・母数の記載が一切ありません。</p>
+    </li>
+    <li>
+      <p class="myth-claim">視聴完了率70%超で関連動画への表示が増える</p>
+      <p class="myth-why">YouTube公式に該当記述なし。日本語圏で広まった通説です。</p>
+    </li>
+    <li>
+      <p class="myth-claim">CTR 4%未満はおすすめに出ない ／ 8%超で積極配信</p>
+      <p class="myth-why">出典なし。YouTube公式の説明とも整合しません。</p>
+    </li>
+    <li>
+      <p class="myth-claim">4秒ごとの画面切り替えで維持率58% vs 静止41%</p>
+      <p class="myth-why">一次データが皆無で、複数サイトの間で数値だけが循環しています。画面切り替え間隔の推奨値は、出典なしのまま相互に矛盾しています。</p>
+    </li>
+  </ul>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>90日の進め方</h2>
+  <p class="sect-note">上から順に。週1投稿のペースは変えずに進められる分量です。</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>時期</th><th>やること</th><th>効果</th><th>コスト</th></tr></thead>
+      <tbody>
+        <tr><td class="num">第1週</td><td>チャンネルと動画の既定言語を「日本語」に設定</td><td><span class="chip chip-lg">大</span></td><td class="cost">極小</td></tr>
+        <tr><td class="num">第1週</td><td>全既存動画のタイトル改訂（話数を末尾へ／絵文字削除／先頭15文字に検索語／全角28文字以内）</td><td><span class="chip chip-lg">大</span></td><td class="cost">小</td></tr>
+        <tr><td class="num">第1〜2週</td><td>サムネのレイアウト3パターンを設計（固定層と可変層を分ける）</td><td><span class="chip chip-lg">大</span></td><td class="cost">中</td></tr>
+        <tr><td class="num">第2週</td><td>再生リスト（シリーズ設定）・終了画面・カードを全動画に設定</td><td><span class="chip chip-md">中</span></td><td class="cost">小</td></tr>
+        <tr><td class="num">第2〜4週</td><td>日本語SRTの運用開始（自動字幕を手直ししてアップロード）</td><td><span class="chip chip-lg">大</span></td><td class="cost">中</td></tr>
+        <tr><td class="num">第3週〜</td><td>企画を検索キーワード起点に切り替え</td><td><span class="chip chip-lg">大</span></td><td class="cost">小</td></tr>
+        <tr><td class="num">第3週〜</td><td>焼き込みを要点テロップ（3〜5割）に縮小</td><td><span class="chip chip-lg">大</span></td><td class="cost">編集減</td></tr>
+        <tr><td class="num">第4週〜</td><td>冒頭15秒の再設計（挨拶を排除し、5秒以内に中心の一言）</td><td><span class="chip chip-md">中</span></td><td class="cost">小</td></tr>
+        <tr><td class="num">第6週〜</td><td>コミュニティ投稿を週1〜3回、コメントは24時間以内に返信</td><td><span class="chip chip-md">中</span></td><td class="cost">小</td></tr>
+        <tr><td class="num">第8週〜</td><td>ショートを段階導入（本数の25〜40%を上限、長尺にリンク）</td><td><span class="chip chip-md">中</span></td><td class="cost">中</td></tr>
+        <tr><td class="num">継続</td><td>投稿頻度は週1を維持。上げない</td><td><span class="chip chip-sm">—</span></td><td class="cost">ゼロ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p class="ct">期限のある話：2027年2月1日</p>
+    <p>YouTubeパートナープログラムの<strong>新規参入条件が倍になります</strong>。現行の4,000時間が <strong>8,000時間</strong>（またはショート90日2,000万回）へ。週1・10分のチャンネルには非常に高い壁です。</p>
+    <p><strong>既にYPPに参加していれば影響を受けません。</strong>2027年1月末までの申請が決定的に有利です。</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>調べて「存在しなかった」こと</h2>
+  <p class="sect-note">探した上で、公開データが無いと確認した項目です。ここに挙げたものについて断定的に語る情報源は、いずれも根拠を持っていません。</p>
+  <div class="limits">
+    <ul>
+      <li>「トンマナ統一 vs 毎回変更」のA/Bテストデータ（日英とも）</li>
+      <li>スピリチュアル／自己啓発／人生論ジャンルに特化したサムネ・タイトルの定量データ</li>
+      <li>焼き込みフルテロップ vs テロップ無しの維持率A/Bテスト</li>
+      <li>2025〜2026年の日本国内における動画の音声オフ視聴率調査（総務省の調査にも該当設問なし）</li>
+      <li>画面切り替え間隔と維持率の測定データ</li>
+      <li>YouTubeのAIが静止画動画を減点するという公式声明</li>
+      <li>ショート→長尺の転換率に関するYouTube公式の数値</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>主な出典</h2>
+  <div class="srcs">
+    <a href="https://support.google.com/youtube/answer/10246996?hl=ja">YouTube公式 ─ 新規・ライト・コアな視聴者</a>
+    <a href="https://support.google.com/youtube/answer/7628154?hl=ja">YouTube公式 ─ インプレッションとCTRのFAQ</a>
+    <a href="https://support.google.com/youtube/answer/1311392?hl=ja">YouTube公式 ─ チャンネル収益化ポリシー</a>
+    <a href="https://support.google.com/youtube/answer/146402?hl=ja">YouTube公式 ─ タグの位置づけ</a>
+    <a href="https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/">YouTube Blog ─ YPP条件変更（2027年2月）</a>
+    <a href="https://blog.youtube/news-and-events/youtube-auto-dubbing-expressive-speech/">YouTube Blog ─ 自動吹き替えの全面提供</a>
+    <a href="https://blog.youtube/creator-and-artist-stories/debunking-common-myths-about-youtube-shorts/">YouTube Blog ─ ショートに関する誤解</a>
+    <a href="https://blog.youtube/creator-and-artist-stories/youtube-related-videos-traffic-guide/">YouTube Blog ─ ショートから長尺への送客</a>
+    <a href="https://1of10.com/blog/what-actually-makes-a-youtube-video-go-viral-in-2025/">1of10 ─ 高パフォーマンス動画30万本の分析</a>
+    <a href="https://www.searchenginejournal.com/do-faces-help-youtube-thumbnails-heres-what-the-data-says/563944/">SEJ ─ サムネイルの顔は効くのか</a>
+    <a href="https://www.searchenginejournal.com/how-youtubes-recommendation-system-works-in-2025/538379/">SEJ ─ 推薦システムの仕組み（公式取材）</a>
+    <a href="https://www.overseeros.com/blog/emojis-in-youtube-titles">OverseerOS ─ タイトルの絵文字（マッチドペア分析）</a>
+    <a href="https://vidiq.com/blog/post/emojis-in-youtube-titles/">vidIQ ─ 絵文字 1億2,850万本調査</a>
+    <a href="https://vidiq.com/blog/post/stop-using-episode-numbers-gaming-content/">vidIQ ─ 話数ナンバリングをやめるべき理由</a>
+    <a href="https://air.io/en/audience-growth/do-youtube-shorts-help-your-long-form-videos-grow-data-from-18000-channels">AIR Media-Tech ─ 18,000チャンネル調査</a>
+    <a href="https://www.3playmedia.com/why-3play/case-studies/discovery-digital-networks/">3Play Media ─ 字幕の再生数への効果（実測A/B）</a>
+    <a href="https://www.moba-ken.jp/project/lifestyle/20240924.html">モバイル社会研究所 ─ 倍速視聴の実態</a>
+    <a href="https://kamuitracker.com/blog/archives/15593">kamui tracker ─ 伸びるサムネイル調査</a>
+    <a href="https://rakkokeyword.com/techo/tool-youtube-title/">ラッコキーワード ─ タイトル文字数の見え方</a>
+    <a href="https://support.google.com/youtube/answer/16391400?hl=en">YouTube公式 ─ Test &amp; Compare の仕様</a>
+  </div>
+</section>
+
+<footer>
+  評価の表記 ─ <span class="ev ev-a">A 実証</span> 手法とサンプル数が開示された調査・実験／<span class="ev ev-b">B 事例</span> 実務者の検証・ケーススタディ／<span class="ev ev-c">C 通説</span> 出典のない一般論（本文では採用していません）。
+  調査は Web 検索のみで実施。上記以外に約110件の情報源を参照し、根拠の確認できなかったものは除外しています。
+</footer>
+
+</div>
+</body>
+</html>
