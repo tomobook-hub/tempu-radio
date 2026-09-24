@@ -66,33 +66,10 @@ header.masthead{padding:60px 0 34px;border-bottom:1px solid var(--rule-strong)}
 .meta{display:flex;flex-wrap:wrap;gap:0 20px;font-size:13px;color:var(--ink-faint)}
 .meta b{color:var(--ink-soft)}
 
-/* 引用された当該箇所 */
-.quoted{background:var(--shu-soft);border:1px solid var(--rule);border-left:3px solid var(--shu);
-  padding:20px 22px;margin:0 0 28px}
-.quoted .qlabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--shu);margin:0 0 10px}
-.quoted p{margin:0;font-family:var(--f-display);font-size:18px;line-height:1.8;color:var(--ink)}
-
-/* 答え／強調ブロック */
-.answer{background:var(--ai-soft);border:1px solid var(--rule);padding:20px 22px;margin:0 0 28px}
-.answer p{margin:0;font-size:17px}
-.answer p+p{margin-top:12px}
-
 .note{background:var(--surface-sunk);border:1px solid var(--rule);padding:18px 20px;margin:24px 0}
 .note p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.85}
 .note p+p{margin-top:10px}
 .note b{color:var(--ink)}
-
-/* 対比の表 */
-.facing{border:1px solid var(--rule);background:var(--surface);margin:0 0 24px}
-.facing .col{padding:20px 22px}
-.facing .col+.col{border-top:1px solid var(--rule)}
-.facing .lb{font-size:11.5px;font-weight:700;letter-spacing:.1em;margin:0 0 10px}
-.facing .a .lb{color:var(--matsu)}
-.facing .b .lb{color:var(--ink-faint)}
-.facing .a{background:var(--matsu-soft)}
-.facing p{margin:0;font-size:16px;line-height:1.85}
-.facing p+p{margin-top:10px}
-.facing .src{font-size:13px;color:var(--ink-faint);margin-top:10px;line-height:1.7}
 
 /* 番号つきの本命リスト */
 ol.ways{list-style:none;padding:0;margin:0 0 24px;counter-reset:w}
@@ -141,61 +118,9 @@ footer p{margin:0 0 12px}
 <header class="masthead">
   <p class="kicker">村里やすゆき天風ラジオ ／ ご質問へのお答え</p>
   <h1>公式チャンネルの隣に<br>並ぶには</h1>
-  <p class="standfirst">資料に線を引いてくださった箇所について、「このやり方を教えてほしい」とのご質問をいただきました。お答えいたします。ただ、その前に<strong>ひとつ、私の説明が足りていなかったところがございます。</strong>線を引いてくださった、まさにその一文です。</p>
-  <div class="meta"><span>2026年9月24日</span><span>作成 <b>佐々木</b></span></div>
+  <p class="standfirst">「この方法だけ教えていただけますか」とのご質問をいただきました。<strong>公式チャンネルにお願いできること</strong>と、<strong>天風ラジオ側で直していただきたいこと</strong>を、順にお書きします。</p>
+  <div class="meta"><span>2026年9月25日</span><span>作成 <b>佐々木</b></span></div>
 </header>
-
-<section>
-  <p class="eyebrow">線を引いてくださった一文について</p>
-  <h2>ひとことで書いてしまいましたが、<br>ここはもっと奥が深いところです</h2>
-
-  <div class="quoted">
-    <p class="qlabel">資料に書いた文</p>
-    <p>YouTubeは同じ言葉を持つ動画どうしを結びつけて、片方を見ている人の画面に、もう片方を「関連動画」として出します。天風ラジオのタイトルに「中村天風」が入っていないと、いちばん近いところにいる視聴者の画面に並べません。</p>
-  </div>
-
-  <p>「関連動画として出します」と、さらりと書いてしまいました。けれど<strong>YouTubeが関連動画に何を出すかは、言葉が一致しているかどうかだけで決まるものではありません。</strong>視聴者おひとりおひとりの動きを、いくつも重ね合わせたうえでの判断になります。</p>
-
-  <p>もともと奥の深いところなのに、そのことをお伝えしないまま一行にまとめてしまいました。<strong>分かりにくくしてしまい、申し訳ありません。</strong></p>
-
-  <div class="facing">
-    <div class="col a">
-      <p class="lb">検索 ── タイトルの言葉が効きます</p>
-      <p>YouTube公式の説明に、はっきり書かれています。「関連性を評価するために、<strong>タイトル、タグ、説明</strong>、動画コンテンツが検索クエリにどれだけ一致するかなど、さまざまな要素を調べます」。</p>
-      <p class="src">出典：YouTube公式ヘルプ「YouTube 検索の仕組み」</p>
-    </div>
-    <div class="col b">
-      <p class="lb">関連動画・おすすめ ── タイトルの言葉は出てきません</p>
-      <p>公式が判断材料として挙げているのは、再生履歴、検索履歴、登録チャンネル、高評価、低評価、「興味がない」というご意見、「チャンネルをおすすめに表示しない」というご意見、満足度のアンケート——<strong>すべて視聴者の側の動きです。</strong></p>
-      <p>タイトル・説明・タグの文字が一致するかどうかは、<strong>判断材料としてひとつも挙げられていません。</strong></p>
-      <p class="src">出典：YouTube公式ヘルプ「YouTube のおすすめ動画の仕組み」</p>
-    </div>
-  </div>
-
-  <div class="answer">
-    <p><strong>お伝えしたかったのは、こういうことでした。</strong></p>
-    <p>YouTubeが関連動画として出してくれるのを待つ、という話ではありません。<strong>公式チャンネルのほうに、天風ラジオへの入口を作っていただく。</strong>概要欄の説明に1行、動画の終了画面に1枚、動画の途中にカードを1枚。なかでも<strong>概要欄に固定で置いていただくのが、いちばん確かです。</strong></p>
-    <p>そうすれば、<strong>中村天風を見に来られた方が、そのまま天風ラジオにも来てくださる。</strong>その導線を作りたい、という意味で書いた一文でした。線を引いてくださったところは、そういう意味だとお受け取りいただければ幸いです。</p>
-  </div>
-</section>
-
-<section>
-  <p class="eyebrow">では、どうするか</p>
-  <h2>入口を作ることが、<br>いちばん確かな道です</h2>
-
-  <p>念のため申し添えますと、「この動画の隣に、あの動画を出してください」という設定は、YouTubeに存在しません。投稿する側から指定することはできない仕組みになっています。</p>
-
-  <p>ただ、公式がひとつだけ、はっきり書いていることがあります。</p>
-
-  <div class="answer">
-    <p><strong>「どの動画が、一緒に見られているか」</strong></p>
-    <p>公式ヘルプの言葉では「<strong>動画 A の視聴者は動画 B も見ている</strong>」。同じ方が公式チャンネルの動画と天風ラジオの両方をご覧になった実績が積み上がるほど、YouTubeはこの二つを「近い」と判断します。</p>
-  </div>
-
-  <p>つまり、入口を作って実際にお越しいただくことは、<strong>そのまま「一緒に見られている」実績になります。</strong>遠回りに見えて、これがいちばん確かな道です。</p>
-
-  <p>そして、その土台はもうあります。<strong>公式チャンネルには、先生の体験談が載っています。</strong>「生きている幸せをつかむ」Part1 が11,576回、Part2 が6,860回。<strong>この体験談をご覧になった一万人を超える方々は、先生が毎週天風ラジオで語っておられることを、まだご存じありません。</strong>いちばん近いところにおられる方々です。</p>
-</section>
 
 <section>
   <p class="eyebrow">公式チャンネルへ</p>
@@ -240,7 +165,7 @@ footer p{margin:0 0 12px}
 
 
   <h3>2　チャンネルに、プロフィールを入れてください</h3>
-  <p>本日確かめたのですが、<strong>天風ラジオのチャンネルには、説明文（プロフィール）が一行も入っていません。</strong>空欄のままです。</p>
+  <p>拝見したところ、<strong>天風ラジオのチャンネルには、説明文（プロフィール）が一行も入っていないようです。</strong>空欄のままになっております。</p>
   <p>ここは、初めて来られた方が「どなたが話しておられるのだろう」と思ったときに開く場所です。<strong>中村天風財団の認定講師であること</strong>が書かれているかどうかで、受け取られ方がまったく変わります。いま増えている、中村天風の言葉をAIの声で読み上げるだけのチャンネルと、先生とを分けるのは、この一点です。</p>
   <div class="note">
     <p><b>書いていただきたいこと（目安です）</b><br>
@@ -265,9 +190,9 @@ footer p{margin:0 0 12px}
 </section>
 
 <footer>
-  <p>2026年9月24日作成。手順・条件・数値は、同日時点のYouTube公式ヘルプおよびYouTube公式の説明ページに基づいています。画面の名称は今後変わることがあります。</p>
-  <p>主な出典：YouTube公式ヘルプ「動画に終了画面を追加する」「動画に情報カードを追加する」「YouTube チャンネルのプロフィールを管理する」「YouTube のおすすめ動画の仕組み」「YouTube のおすすめシステム」「YouTube 検索の仕組み」。</p>
-  <p>チャンネルの数値は2026年9月24日に公開ページで確かめたものです。検索順位は同日時点のもので、日々変動します。</p>
+  <p>2026年9月25日作成。手順と条件は、同日時点のYouTube公式ヘルプに基づいています。画面の名称は今後変わることがあります。</p>
+  <p>主な出典：YouTube公式ヘルプ「動画に終了画面を追加する」「動画に情報カードを追加する」「YouTube チャンネルのプロフィールを管理する」。</p>
+  <p>チャンネルの数値と、#65のタイトル・チャンネルの説明文の状態は、2026年9月25日に公開ページで確かめたものです。</p>
 </footer>
 
 </div>
