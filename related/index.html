@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
 <title>公式チャンネルの隣に並ぶには</title>
-<meta name="description" content="「タイトルの付け方を変える」「絵文字を外す」とは具体的に何を指すのか。天風ラジオの実際のタイトルでご説明します。">
+<meta name="description" content="「関連動画として並べません」と書いた部分について。訂正と、確実に並べる方法、そして今日できる手順。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="公式チャンネルの隣に並ぶには">
 <meta property="og:description" content="関連動画はこちらから指定できません。では、どうすれば公式チャンネルの視聴者に届くのか。">
@@ -49,200 +50,403 @@ body{background:var(--ground);color:var(--ink);font-family:var(--f-body);
 img{max-width:100%;height:auto}
 .wrap{max-width:780px;margin:0 auto;padding:0 24px 120px}
 section{padding-top:64px}
-.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);
-  margin:0 0 12px;display:flex;align-items:center;gap:9px}
-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(27px,5.4vw,38px);
-  line-height:1.45;margin:0 0 18px;text-wrap:balance}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin:0 0 12px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,5.6vw,40px);
+  line-height:1.4;margin:0 0 20px;text-wrap:balance}
 h2{font-family:var(--f-display);font-weight:700;font-size:clamp(23px,3.6vw,29px);
   line-height:1.5;margin:0 0 20px;text-wrap:balance;letter-spacing:.01em}
 h3{font-size:17px;font-weight:700;margin:36px 0 12px;color:var(--ink)}
 p{margin:0 0 18px}
 strong{font-weight:700}
-a{color:var(--ai)}
+a{color:var(--ai);word-break:break-all}
 
-header.top{padding:60px 0 0;border-bottom:1px solid var(--rule-strong);padding-bottom:34px}
-.lede{color:var(--ink-soft);font-size:16px;margin:0}
+header.masthead{padding:60px 0 34px;border-bottom:1px solid var(--rule-strong)}
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin:0 0 16px}
+.standfirst{color:var(--ink-soft);font-size:16.5px;margin:0 0 22px;line-height:1.9}
+.meta{display:flex;flex-wrap:wrap;gap:0 20px;font-size:13px;color:var(--ink-faint)}
+.meta b{color:var(--ink-soft)}
 
-/* 質問カード */
-.q{background:var(--surface);border:1px solid var(--rule);
-   border-left:3px solid var(--ai);padding:20px 22px;margin:0 0 30px}
-.q .qlabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--ai);margin:0 0 8px}
-.q p{margin:0;font-size:16px;color:var(--ink-soft)}
-.q .said{font-family:var(--f-display);font-size:19px;color:var(--ink);font-weight:500;margin:0}
+/* 引用された当該箇所 */
+.quoted{background:var(--shu-soft);border:1px solid var(--rule);border-left:3px solid var(--shu);
+  padding:20px 22px;margin:0 0 28px}
+.quoted .qlabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--shu);margin:0 0 10px}
+.quoted p{margin:0;font-family:var(--f-display);font-size:18px;line-height:1.8;color:var(--ink)}
 
-/* 答え */
-.answer{background:var(--ai-soft);border:1px solid var(--rule);padding:20px 22px;margin:0 0 30px}
+/* 答え／強調ブロック */
+.answer{background:var(--ai-soft);border:1px solid var(--rule);padding:20px 22px;margin:0 0 28px}
 .answer p{margin:0;font-size:17px}
 .answer p+p{margin-top:12px}
-
-/* タイトル実例 */
-.ex{border:1px solid var(--rule);background:var(--surface);margin:0 0 16px}
-.ex .row{display:grid;grid-template-columns:52px 1fr;gap:0 14px;padding:14px 18px;align-items:start}
-.ex .row+.row{border-top:1px solid var(--rule)}
-.ex .tag{font-size:11px;font-weight:700;letter-spacing:.08em;padding-top:5px}
-.ex .now .tag{color:var(--ink-faint)}
-.ex .new .tag{color:var(--matsu)}
-.ex .new{background:var(--matsu-soft)}
-.ttl{font-family:var(--f-display);font-size:19px;line-height:1.65;word-break:break-all;margin:0}
-.ex .now .ttl{color:var(--ink-soft)}
-.why{font-size:14px;color:var(--ink-soft);margin:6px 0 0;line-height:1.75}
-mark.kw{background:transparent;color:var(--matsu);font-weight:700;
-  border-bottom:2px solid var(--matsu);padding-bottom:1px}
-mark.em{background:var(--shu-soft);color:var(--shu);font-weight:700;padding:0 3px;border-radius:2px}
-
-/* 絵文字の現物 */
-.glyphs{display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);
-  background:var(--surface);margin:0 0 24px}
-.glyph{display:grid;grid-template-columns:104px 1fr;gap:0 20px;padding:20px;align-items:center}
-.glyph>div:last-child{min-width:0}
-.glyph+.glyph{border-top:1px solid var(--rule)}
-.big{font-size:44px;line-height:1.15;text-align:center;font-family:var(--f-display);
-  min-width:0;overflow:hidden;word-break:keep-all}
-.big.two{font-size:30px;letter-spacing:.04em}
-.egline{display:block;margin-top:12px;padding:12px 14px;background:var(--surface-sunk,#F2F3F5);
-  border-radius:3px;font-size:13.5px;line-height:1.75}
-.egrow{display:grid;grid-template-columns:44px 1fr;gap:0 10px;align-items:baseline}
-.egrow+.egrow{margin-top:6px}
-.eglbl{font-size:11.5px;font-weight:700;color:var(--ink-faint,#7C879C);letter-spacing:.06em}
-.bad .big{color:var(--shu)}
-.ok .big{color:var(--matsu)}
-.gname{font-weight:700;font-size:16px;margin:0 0 3px}
-.gwhere{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.7}
-.verdict{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;
-  padding:2px 8px;border-radius:2px;margin-left:8px;vertical-align:2px}
-.bad .verdict{background:var(--shu-soft);color:var(--shu)}
-.ok .verdict{background:var(--matsu-soft);color:var(--matsu)}
 
 .note{background:var(--surface-sunk);border:1px solid var(--rule);padding:18px 20px;margin:24px 0}
 .note p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.85}
 .note p+p{margin-top:10px}
 .note b{color:var(--ink)}
 
-ul.rules{list-style:none;padding:0;margin:0}
-ul.rules li{border-top:1px solid var(--rule);padding:14px 0;display:grid;
-  grid-template-columns:26px 1fr;gap:0 12px}
-ul.rules li:last-child{border-bottom:1px solid var(--rule)}
-ul.rules .n{color:var(--ai);font-weight:700;font-family:var(--f-display);font-size:18px}
-ul.rules>li>div>b:first-child{display:block;margin-bottom:2px}
-ul.rules span b{display:inline;font-weight:700;color:var(--ink);
-  background:var(--surface-sunk,#F2F3F5);padding:1px 5px;border-radius:2px;white-space:nowrap}
-ul.rules span{font-size:15px;color:var(--ink-soft);line-height:1.8}
-
 .praise{border:1px solid var(--rule);border-top:3px solid var(--matsu);
-  background:var(--matsu-soft);padding:20px 22px;margin:28px 0}
+  background:var(--matsu-soft);padding:22px;margin:0 0 28px}
 .praise h3{margin:0 0 10px;color:var(--matsu)}
 .praise p{margin:0;font-size:16px}
-.praise .sample{font-family:var(--f-display);font-size:18px;margin:12px 0 0;color:var(--ink)}
+.praise p+p{margin-top:12px}
 
+/* 対比の表 */
+.facing{border:1px solid var(--rule);background:var(--surface);margin:0 0 24px}
+.facing .col{padding:20px 22px}
+.facing .col+.col{border-top:1px solid var(--rule)}
+.facing .lb{font-size:11.5px;font-weight:700;letter-spacing:.1em;margin:0 0 10px}
+.facing .a .lb{color:var(--matsu)}
+.facing .b .lb{color:var(--ink-faint)}
+.facing .a{background:var(--matsu-soft)}
+.facing p{margin:0;font-size:16px;line-height:1.85}
+.facing p+p{margin-top:10px}
+.facing .src{font-size:13px;color:var(--ink-faint);margin-top:10px;line-height:1.7}
 
-.pair{border:1px solid var(--rule);background:var(--surface);margin:0 0 18px}
-.pair .line{display:grid;grid-template-columns:104px 1fr;gap:0 14px;padding:13px 18px;align-items:baseline}
-.pair .now{background:var(--surface-sunk)}
-.pair .now .lb{color:var(--ink-faint)}
-.pair .now .val{color:var(--ink-soft);font-size:17px}
-@media(max-width:480px){.pair .line{grid-template-columns:1fr;gap:4px 0}}
-.pair .line+.line{border-top:1px solid var(--rule)}
-.pair .lb{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--ai)}
-.pair .val{font-family:var(--f-display);font-size:18px;line-height:1.6;word-break:break-all;margin:0}
-.pair .cnt{font-size:12.5px;color:var(--ink-faint);margin-left:6px;font-family:var(--f-body)}
-.pair .thumb .val{font-size:26px;font-weight:700;letter-spacing:.04em}
-.pair .thumb{background:var(--matsu-soft)}
-.pair .thumb .lb{color:var(--matsu)}
+/* 番号つきの本命リスト */
+ol.ways{list-style:none;padding:0;margin:0 0 24px;counter-reset:w}
+ol.ways>li{border:1px solid var(--rule);background:var(--surface);
+  padding:22px;margin:0 0 14px;counter-increment:w;position:relative}
+ol.ways>li.best{border-top:3px solid var(--matsu)}
+ol.ways>li>.num{font-family:var(--f-display);font-size:13px;font-weight:700;
+  color:var(--ai);letter-spacing:.1em;margin:0 0 6px;display:block}
+ol.ways>li.best>.num{color:var(--matsu)}
+ol.ways>li>.name{font-family:var(--f-display);font-size:20px;font-weight:700;
+  margin:0 0 10px;line-height:1.5}
+ol.ways>li>p{font-size:16px;margin:0 0 12px}
+ol.ways>li>p:last-child{margin-bottom:0}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+  padding:3px 9px;border-radius:2px;background:var(--matsu-soft);color:var(--matsu);
+  margin-left:8px;vertical-align:3px;font-family:var(--f-body)}
 
-.point{border:1px solid var(--rule);background:var(--surface);padding:24px 20px;margin:0 0 26px;text-align:center}
-.point .ttlline{font-family:var(--f-display);font-size:clamp(19px,4.4vw,25px);line-height:1.5;margin:0;word-break:break-all}
-.point .hl{color:var(--matsu);font-weight:700;border-bottom:4px solid var(--matsu);padding-bottom:3px}
-.point .arrow{color:var(--matsu);font-size:20px;margin:10px 0 4px;line-height:1}
-.point .cap{font-size:15px;color:var(--matsu);font-weight:700;margin:0}
-.point .sub{font-size:14px;color:var(--ink-soft);margin:14px 0 0;line-height:1.8}
-footer{margin-top:70px;padding-top:24px;border-top:1px solid var(--rule);
-  font-size:13.5px;color:var(--ink-faint);line-height:1.8}
+.howto{background:var(--surface-sunk);border-radius:3px;padding:14px 16px;margin:12px 0 0;
+  font-size:14.5px;line-height:1.8;color:var(--ink-soft)}
+.howto b{color:var(--ink);font-size:11.5px;letter-spacing:.08em;display:block;margin-bottom:5px}
+.howto code{font-family:var(--f-body);background:var(--surface);border:1px solid var(--rule);
+  padding:1px 6px;border-radius:2px;font-size:14px;color:var(--ink);white-space:nowrap;
+  display:inline-block;margin:1px 0}
+
+/* 手順（先生ご自身の操作） */
+ol.steps{list-style:none;padding:0;margin:0 0 24px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:0 14px;
+  padding:16px 0;border-top:1px solid var(--rule)}
+ol.steps li:last-child{border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s);font-family:var(--f-display);font-weight:700;
+  font-size:19px;color:var(--ai);line-height:1.5}
+ol.steps li div{min-width:0}
+ol.steps b{display:block;font-size:16.5px;margin-bottom:3px}
+ol.steps span{font-size:15px;color:var(--ink-soft);line-height:1.8}
+ol.steps code{font-family:var(--f-body);background:var(--surface-sunk);
+  padding:1px 6px;border-radius:2px;font-size:14.5px;color:var(--ink);white-space:nowrap;
+  display:inline-block}
+
+/* 直していただきたい箇所 */
+.fix{border:1px solid var(--rule);background:var(--surface);margin:0 0 14px}
+.fix .line{display:grid;grid-template-columns:96px 1fr;gap:0 14px;padding:14px 18px;align-items:baseline}
+.fix .line+.line{border-top:1px solid var(--rule)}
+.fix .now{background:var(--surface-sunk)}
+.fix .now .lb{color:var(--ink-faint)}
+.fix .now .val{color:var(--ink-soft)}
+.fix .new{background:var(--matsu-soft)}
+.fix .new .lb{color:var(--matsu)}
+.fix .lb{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--ai)}
+.fix .val{font-family:var(--f-display);font-size:18px;line-height:1.65;word-break:break-all;margin:0}
+@media(max-width:480px){.fix .line{grid-template-columns:1fr;gap:4px 0}}
+mark.bad{background:var(--shu-soft);color:var(--shu);font-weight:700;padding:0 3px;border-radius:2px}
+mark.good{background:transparent;color:var(--matsu);font-weight:700;
+  border-bottom:2px solid var(--matsu);padding-bottom:1px}
+
+/* 依頼文案 */
+.letter{border:1px solid var(--rule-strong);background:var(--surface);padding:26px 24px;margin:0 0 20px}
+.letter .lhead{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--ai);
+  margin:0 0 16px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.letter p{font-size:16px;margin:0 0 14px;line-height:1.95}
+.letter p:last-child{margin-bottom:0}
+.letter ol{margin:0 0 14px;padding-left:1.4em;font-size:16px;line-height:1.95}
+.letter ol li{margin-bottom:6px}
+
+/* データの表 */
+table.d{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 22px;background:var(--surface)}
+table.d th,table.d td{border:1px solid var(--rule);padding:11px 13px;text-align:left;line-height:1.7}
+table.d th{background:var(--surface-sunk);font-size:13px;font-weight:700;color:var(--ink-soft);
+  letter-spacing:.04em;white-space:nowrap}
+table.d td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+ul.plain{list-style:none;padding:0;margin:0 0 22px}
+ul.plain li{border-top:1px solid var(--rule);padding:14px 0;font-size:16px;line-height:1.85}
+ul.plain li:last-child{border-bottom:1px solid var(--rule)}
+ul.plain b{display:block;margin-bottom:2px}
+ul.plain span{font-size:15px;color:var(--ink-soft)}
+
+footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-faint);line-height:1.85}
+footer a{color:var(--ink-faint)}
+footer p{margin:0 0 12px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+</head>
+<body>
 
 <div class="wrap">
 
 <header class="masthead">
   <p class="kicker">村里やすゆき天風ラジオ ／ ご質問へのお答え</p>
   <h1>公式チャンネルの隣に<br>並ぶには</h1>
-  <p class="standfirst">先日お送りした資料のうち、「関連動画として並べません」と書いた部分についてのご質問をいただきました。結論から申し上げますと、<strong>関連動画そのものは、こちらから指定できません。</strong>ただ、それを待たずに確実に並べる方法があります。</p>
+  <p class="standfirst">資料に線を引いてくださった箇所について、「このやり方を教えてほしい」とのご質問をいただきました。順にお答えします。ただ、その前に<strong>ひとつ訂正させていただきたいことがございます。</strong>線を引いてくださった、まさにその一文です。</p>
   <div class="meta"><span>2026年9月24日</span><span>作成 <b>佐々木</b></span></div>
 </header>
 
 <section>
-  <p class="eyebrow">まず、正直なところ</p>
-  <h2>関連動画は、YouTubeが決めています</h2>
-  <p>「この動画の隣に、あの動画を出してください」という設定は、<strong>YouTubeには存在しません。</strong>投稿する側から指定することはできません。</p>
-  <p>YouTubeの公式の説明では、次に出す動画は<strong>視聴者ひとりひとりの視聴履歴・検索履歴・チャンネル登録・高評価</strong>などから決めている、とされています。つまり<strong>視聴者の側の動き</strong>で決まっていて、投稿者が触れる場所ではありません。</p>
+  <p class="eyebrow">はじめに</p>
+  <h2>24本、書き換えてくださっていました</h2>
+  <p>お答えに入る前に。先生がタイトルを直してくださっているのを、実際の画面で拝見しました。<strong>#47から#70までの24本すべてです。</strong></p>
+
+  <div class="praise">
+    <h3>数字で見ると、こうなっています</h3>
+    <p>タイトルに「中村天風」が入っている回は、<strong>9月22日の時点で10本、本日9月24日で28本。</strong>ひと月ぶんの作業を、二日でなさったことになります。</p>
+    <p>＃70の「‼️」も外れていました。「❶❷❸❹」の残る古い回を除けば、新しい回はすべてきれいになっています。</p>
+  </div>
+
+  <p>拝見していて何より有り難かったのは、<strong>案をそのままなぞられたのではなく、考え方をつかんで他の回にご自分で広げておられた</strong>ことです。#64「中村天風の平和論」、#69「中村天風の理解と悟り」——こちらからはお出ししていない回です。番号を末尾に回すところまで、全部の回で揃っていました。</p>
+  <p>ですので以下は、もう手を動かされた方に向けて書きます。</p>
+</section>
+
+<section>
+  <p class="eyebrow">訂正</p>
+  <h2>線を引いてくださった一文は、<br>私の書きすぎでした</h2>
+
+  <div class="quoted">
+    <p class="qlabel">資料に書いた文</p>
+    <p>YouTubeは同じ言葉を持つ動画どうしを結びつけて、片方を見ている人の画面に、もう片方を「関連動画」として出します。天風ラジオのタイトルに「中村天風」が入っていないと、いちばん近いところにいる視聴者の画面に並べません。</p>
+  </div>
+
+  <p>ご質問をいただいたのを機に、YouTubeの公式の説明をすべて読み直しました。その結果、<strong>この書き方は正確ではありませんでした。</strong>お詫びして訂正いたします。</p>
+
+  <p>正しくは、こうです。<strong>タイトルの言葉は「検索」には効きます。けれど「関連動画」に出るかどうかは、タイトルの言葉では決まりません。</strong></p>
+
+  <div class="facing">
+    <div class="col a">
+      <p class="lb">検索 ── タイトルの言葉が効きます</p>
+      <p>YouTube公式の説明に、はっきり書かれています。「関連性を評価するために、<strong>タイトル、タグ、説明</strong>、動画コンテンツが検索クエリにどれだけ一致するかなど、さまざまな要素を調べます」。</p>
+      <p>つまり先生が24本直された効果は、<strong>まずここに出ます。</strong></p>
+      <p class="src">出典：YouTube公式ヘルプ「YouTube 検索の仕組み」</p>
+    </div>
+    <div class="col b">
+      <p class="lb">関連動画・おすすめ ── タイトルの言葉は出てきません</p>
+      <p>公式が判断材料として挙げているのは、再生履歴、検索履歴、登録チャンネル、高評価、低評価、「興味がない」というご意見、「チャンネルをおすすめに表示しない」というご意見、満足度のアンケート——<strong>すべて視聴者の側の動きです。</strong></p>
+      <p>タイトル・説明・タグの文字が一致するかどうかは、<strong>判断材料としてひとつも挙げられていません。</strong>私はそれを、さも決まりごとのように書いてしまいました。</p>
+      <p class="src">出典：YouTube公式ヘルプ「YouTube のおすすめ動画の仕組み」</p>
+    </div>
+  </div>
+
   <div class="note">
-    <p><b>お約束できないことは、できないとお伝えします。</b>「関連動画に出るようにします」と言い切れる方法は存在しません。世の中にはそう謳う情報もありますが、公式の裏づけはありませんでした。</p>
+    <p><b>お約束できないことは、できないとお伝えします。</b>「こうすれば関連動画に出ます」と言い切れる方法は存在しません。そう謳う情報は世の中にたくさんありますが、公式の裏づけは見つかりませんでした。私の一文も、そちらに片足を突っ込んでいました。</p>
+  </div>
+
+  <div class="answer">
+    <p><strong>ただし、直された24本が無駄になったということでは、まったくありません。</strong></p>
+    <p>ひとつ、実際に起きていることをご覧ください。いま YouTube で<strong>「クンバハカ」と検索すると、#59「1年７ヶ月かけて悟ったクンバハカ」が7番目あたりに出てきます。</strong>数万回も見られている動画に混じって、です。これは、タイトルにその言葉があるから起きていることです。</p>
+    <p>#59は1,196回。チャンネルで2番目に見られている回になりました。</p>
   </div>
 </section>
 
 <section>
   <p class="eyebrow">では、どうするか</p>
-  <h2>関連動画を待たずに、並べる方法があります</h2>
-  <p>公式チャンネル側の設定で、天風ラジオへの入口を作れます。<strong>どれもYouTubeにもとから付いている機能で、新しく何かを作る必要はありません。</strong>設定したその日から並びます。</p>
+  <h2>関連動画は、YouTubeが決めています。<br>けれど、待たずに並べる方法があります</h2>
 
-  <ul class="rules">
-    <li><span class="n">1</span><div>
-      <b>公式チャンネルのホームに「注目チャンネル」として載せる</b>
-      <span>公式チャンネルのトップページに、天風ラジオが常に並びます。いちばん目立ちます。<br>
-      <span class="egline"><span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［カスタマイズ］→［ホームタブ］→［セクションを追加］→［チャンネル］</span></span></span>
-    </div></li>
-    <li><span class="n">2</span><div>
-      <b>公式チャンネルに、天風ラジオの再生リストを置く</b>
-      <span>他のチャンネルの公開動画を、自分の再生リストに入れることができます。公式チャンネルのページに、天風ラジオの動画そのものが並ぶ形になります。<br>
-      <span class="egline">
-        <span class="egrow"><span class="eglbl">1</span>天風ラジオの動画を開き、動画の下の［…］→［保存］→［新しい再生リストを作成］</span>
-        <span class="egrow"><span class="eglbl">2</span>名前を付けて、公開設定を［公開］にして［作成］</span>
-        <span class="egrow"><span class="eglbl">3</span>YouTube Studio →［カスタマイズ］→［ホームタブ］→［セクションを追加］→［再生リスト］</span>
-      </span></span>
-    </div></li>
-    <li><span class="n">3</span><div>
-      <b>動画の最後に出る「終了画面」から</b>
-      <span>公式の動画を見終えた方に、天風ラジオをご案内できます。見終えた直後は、いちばん次へ進みやすい瞬間です。<br>
-      <span class="egline">
-        <span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［コンテンツ］→ 動画を選ぶ →［エディタ］→［終了画面］→［チャンネル］</span>
-        <span class="egrow"><span class="eglbl">条件</span>動画が25秒以上あること。要素は4つまで</span>
-      </span></span>
-    </div></li>
-    <li><span class="n">4</span><div>
-      <b>公式の動画の概要欄に、リンクを1行</b>
-      <span>いちばん手軽で、条件もありません。<strong>過去の動画にも入れられます。</strong><br>
-      <span class="egline"><span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［コンテンツ］→ 動画を選ぶ →［説明］にURLを貼って［保存］</span></span></span>
-    </div></li>
+  <p>「この動画の隣に、あの動画を出してください」という設定は、YouTubeに存在しません。投稿する側から指定することはできません。</p>
+
+  <p>ただ、公式がひとつだけ、はっきり書いている判断材料があります。</p>
+
+  <div class="answer">
+    <p><strong>「どの動画が、一緒に見られているか」</strong></p>
+    <p>公式ヘルプの言葉では「<strong>動画 A の視聴者は動画 B も見ている</strong>」。同じ方が公式チャンネルの動画と天風ラジオの両方をご覧になった実績が積み上がるほど、YouTubeはこの二つを「近い」と判断します。</p>
+  </div>
+
+  <p>ですから、道はひとつです。<strong>関連動画に出るのを待つのではなく、公式チャンネルの視聴者を、実際に天風ラジオへお送りする。</strong>遠回りに見えて、これがいちばん確かな道です。</p>
+
+  <p>そして、その土台はもうあります。<strong>公式チャンネルには、先生の体験談が載っています。</strong>「生きている幸せをつかむ」Part1 が11,576回、Part2 が6,860回。天風ラジオの最高記録2,567回の、4倍以上の方がご覧になっています。<strong>その方々が、先生が毎週語っておられることをご存じないのです。</strong></p>
+</section>
+
+<section>
+  <p class="eyebrow">本命 ── 公式チャンネル側にお願いすること</p>
+  <h2>並べる方法は、5つあります</h2>
+  <p>どれもYouTubeに最初から付いている機能で、新しく何かを作る必要はありません。設定したその日から並びます。<strong>確かさの順に並べました。</strong></p>
+
+  <ol class="ways">
+    <li class="best">
+      <span class="num">いちばん確か</span>
+      <p class="name">共同編集者として招待してもらう<span class="badge">公式が効果を明言</span></p>
+      <p>公式チャンネルが新しく動画を出すとき、先生を「共同編集者」に招いてもらう機能です。先生は承諾するだけ。<strong>その動画に先生のチャンネル名と登録ボタンが表示されます。</strong></p>
+      <p>これは、<strong>公式ヘルプが効果をはっきり書いている唯一の機能</strong>です。曰く——「YouTube の目標は、共同編集者の視聴者と動画の投稿先チャンネルの視聴者の<strong>両方に対して、動画をおすすめすること</strong>です。ただし、検索結果やおすすめにすぐに変更が反映されない場合があります」。</p>
+      <p>ほかの機能について公式はここまで書きません。5つのうち、これだけが別格です。</p>
+      <div class="howto"><b>公式チャンネル側の操作</b>動画をアップロードするときの <code>［詳細］</code> の <code>［視聴者］</code> で <code>［すべて表示］</code> → <code>［コラボレーション］</code> → <code>［コラボレーターを招待］</code><br>最大10人まで（iPhone・iPadからは5人まで）。収益は投稿したチャンネル側に入ります（先生側には入りません）。</div>
+    </li>
+
+    <li>
+      <span class="num">手軽さと効果の釣り合いが良い</span>
+      <p class="name">公式の動画の「終了画面」に1枚</p>
+      <p>動画の最後の5〜20秒に出せる、あの案内です。<strong>他のチャンネルの動画を指定できる</strong>ことは、公式ヘルプに明記されています。見終えた直後は、いちばん次へ進みやすい瞬間です。</p>
+      <div class="howto"><b>公式チャンネル側の操作</b>YouTube Studio → <code>［コンテンツ］</code> → 動画を選ぶ → <code>［エディタ］</code> → <code>［終了画面］</code><br>条件：その動画が25秒以上あること。置ける要素は4つまで（通常の横長の動画の場合）。</div>
+    </li>
+
+    <li>
+      <span class="num">補助</span>
+      <p class="name">動画の途中に出る「カード」から</p>
+      <p>再生中に画面の右上に出る、小さな案内です。公式ヘルプが用途として<strong>「他のチャンネルを視聴者におすすめする」</strong>ことをはっきり挙げています。1本の動画に5枚まで。</p>
+      <div class="howto"><b>公式チャンネル側の操作</b>YouTube Studio → <code>［コンテンツ］</code> → 動画を選ぶ → <code>［エディタ］</code> → <code>［カード］</code></div>
+    </li>
+
+    <li>
+      <span class="num">公式ページに並ぶ</span>
+      <p class="name">公式チャンネルに、天風ラジオの再生リストを置く</p>
+      <p>他のチャンネルの公開動画を、自分の再生リストに入れることは、YouTubeで正式に認められています。公式チャンネルのページに、天風ラジオの動画そのものが並ぶ形になります。</p>
+      <p><strong>ただし正直に申し上げますと</strong>——「再生リストに入れると関連動画に出やすくなる」とまでは、公式のどこにも書かれていませんでした。確かなのは「公式のページに天風ラジオが並ぶ」ところまでです。</p>
+      <div class="howto"><b>公式チャンネル側の操作</b>再生リストを作り、YouTube Studio → <code>［カスタマイズ］</code> → <code>［ホーム］</code>タブ → <code>［レイアウト］</code> → <code>［セクションを追加］</code> → <code>［再生リスト］</code></div>
+    </li>
+
+    <li>
+      <span class="num">常設</span>
+      <p class="name">公式チャンネルのホームに載せてもらう</p>
+      <p>公式チャンネルのトップページに、天風ラジオが常に並びます。公式は「チャンネル登録者がチャンネルのホームページにアクセスした際に視聴できるよう、<strong>ご自身の動画、または任意の YouTube 動画をハイライト表示することができます</strong>」と書いています。</p>
+      <div class="howto"><b>公式チャンネル側の操作</b>YouTube Studio → <code>［カスタマイズ］</code> → <code>［ホーム］</code>タブ → <code>［レイアウト］</code> → <code>［セクションを追加］</code> → <code>［スポットライト］</code></div>
+    </li>
+  </ol>
+
+  <div class="note">
+    <p><b>5つとも、先生の作業ではありません。</b>すべて公式チャンネル側の設定です。先生がなさることは、お願いすること、それだけです。</p>
+    <p>おそらく、お電話で一言で済むお話かと存じます。文面が要るときのために、次に用意いたしました。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">お使いください</p>
+  <h2>公式チャンネルへの、お願いの文案</h2>
+  <p>そのままお使いいただいても、下敷きにしていただいても結構です。3つに絞ってあります。一度に5つお願いすると、かえって進まないためです。</p>
+
+  <div class="letter">
+    <p class="lhead">文 案</p>
+    <p>いつもお世話になっております。認定講師の村里です。</p>
+    <p>毎週配信しております「天風ラジオ」について、ひとつお願いがございます。</p>
+    <p>公式チャンネルをご覧の方に天風ラジオをお知らせする方法が、YouTubeの機能としていくつかございます。いずれも設定を変えるだけで、新しく何かを作っていただく必要はございません。ご検討いただけましたら、次の順でありがたく存じます。</p>
+    <ol>
+      <li>今後、公式チャンネルで動画を公開される際に、私を「共同編集者」としてご招待いただく</li>
+      <li>公式チャンネルの動画の「終了画面」に、天風ラジオを1枚加えていただく</li>
+      <li>公式チャンネルのホームに、天風ラジオの再生リストを置いていただく</li>
+    </ol>
+    <p>天風ラジオ　https://www.youtube.com/@tempu-murasato</p>
+    <p>ご負担のない範囲で結構です。どうぞよろしくお願いいたします。</p>
+  </div>
+
+  <div class="note">
+    <p><b>ひとつだけ、やらなくてよいこと。</b>「公式チャンネルの名前をタイトルや説明文に入れておけば、公式のファンに届くのでは」——これは<strong>公式がはっきり否定しています。</strong>「他のユーザーの動画でチャンネル名やハンドル名がメンションされても、自分のチャンネルのファンに対してその動画が表示される可能性が高くなるということはありません」。手間をかける価値がありません。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">先生ご自身の手で</p>
+  <h2>今日できること ── パソコンでの手順</h2>
+  <p>公式チャンネルへのお願いとは別に、先生のお手元でできることがあります。画面の名前まで、公式ヘルプの表記どおりに書きました。</p>
+
+  <h3>タイトルや説明を直す</h3>
+  <ol class="steps">
+    <li><div><b>パソコンで studio.youtube.com を開く</b><span>YouTubeにログインした状態で開いてください。「YouTube Studio」という画面です。</span></div></li>
+    <li><div><b>左側のメニューから <code>［コンテンツ］</code></b><span>上から「ダッシュボード」「コンテンツ」「アナリティクス」…と並んでいる、その2番目です。</span></div></li>
+    <li><div><b>直したい動画の、サムネイル画像かタイトルの文字を、そのままクリック</b><span>鉛筆のマークを探す必要はありません。公式の手順も「動画のタイトルまたはサムネイルをクリックします」となっています。</span></div></li>
+    <li><div><b><code>［詳細］</code>の画面が開きます</b><span>いちばん上が「タイトル」、その下が「説明」です。ここを直します。</span></div></li>
+    <li><div><b><code>［保存］</code></b><span>これで終わりです。</span></div></li>
+  </ol>
+
+  <div class="note">
+    <p><b>直すことに、ためらいは要りません。</b>「公開済みの動画のタイトルを変えると評価が下がる」といった記述は、公式のどこにもありませんでした。むしろ公式は、<b>古いサムネイルを更新することを勧めています</b>——「新しい視聴者に動画の魅力をアピールするために、古いサムネイルを更新してみることもおすすめします」。</p>
+    <p>ひとつだけ、公式が書いている時間の話があります。<b>検索結果に反映されるまでに数日かかることがあります。</b>直した翌日に何も変わらなくても、それは正常です。</p><p>本日それを目の当たりにしました。<b>「クンバハカ」で検索して出てくる#59のタイトルは、まだ直される前の古いものです。</b>動画のページを開けば新しいタイトルになっているのに、検索のほうがまだ追いついていません。先生が24本直された分も、これから順に置き換わっていきます。<b>いま何も起きていないように見えても、それは待ち時間です。</b></p>
+  </div>
+
+  <h3>直していただきたい箇所が、3つございます</h3>
+  <p>72本を一本ずつ確かめました。急ぐ順です。</p>
+
+  <div class="fix">
+    <div class="line now"><p class="lb">#65 いま</p><p class="val">いくつになっても「青年の呼吸」が<mark class="bad">てき</mark>る|中村天風の呼吸法#65</p></div>
+    <div class="line new"><p class="lb">直すと</p><p class="val">いくつになっても「青年の呼吸」が<mark class="good">でき</mark>る｜中村天風の呼吸法#65</p></div>
+  </div>
+  <p><strong>「できる」が「てきる」になっております。</strong>濁点が抜けただけのことですが、公開されたままです。あわせて、縦棒が半角の <code>|</code> になっているので、他の回と同じ全角の <code>｜</code> に揃えると並びがきれいになります（#61も同じです）。</p>
+
+  <p style="margin-top:32px"><strong>絵文字が残っている回が、10本ございます。</strong>すべて#43以前の古い回です。お手隙のときで結構です。</p>
+  <div class="scroll">
+  <table class="d">
+    <tr><th>記号</th><th>残っている回</th></tr>
+    <tr><td><strong>❶❷❸❹</strong></td><td>#43・#42・#41・#13・#12・#11・#10（7本）</td></tr>
+    <tr><td><strong>❗️</strong></td><td>#39「天風ラジオ、次の一歩へ。YouTubeで再スタート❗️」</td></tr>
+    <tr><td><strong>➖</strong></td><td>#24「笑うことの大切さ➖1」</td></tr>
+    <tr><td><strong>‼︎</strong></td><td>#8「本州横断達成‼︎」</td></tr>
+  </table>
+  </div>
+  <p>「（1）」「その1」に置き換えるか、外してしまっても構いません。<br>それと、<strong>72本のうち＃26だけ、先頭が全角の「＃」になっています。</strong>他はすべて半角の「#」です。YouTubeは別の文字として扱いますので、次に触られるときに揃えていただければ十分です。</p>
+
+  <h3>再生リストを作る</h3>
+  <p>「悟りへの道」は#47から#50まで続きもののお話なのに、まとめた再生リストがありません。<strong>第一話をご覧になった方が、第二話へ進む道がない状態です。</strong>すでにお作りの「YouTube木漏れ日」と同じ要領です。一度作れば、あとは新しい回を足すだけです。</p>
+  <ol class="steps">
+    <li><div><b>YouTube Studio の<strong>右上</strong>の <code>［作成］</code> → <code>［新しい再生リスト］</code></b><span>左のメニューではなく、右上です。</span></div></li>
+    <li><div><b>タイトルと説明を入れる</b><span>タイトルは150文字まで、説明は5,000文字までです。</span></div></li>
+    <li><div><b>公開設定を <code>［公開］</code> にする</b><span>ここが「非公開」のままだと、視聴者から見えません。</span></div></li>
+    <li><div><b><code>［動画を追加］</code> で#47〜#50を選び、<code>［作成］</code></b><span>並び順もこの画面で選べます。</span></div></li>
+  </ol>
+
+  <h3>タグには、時間をかけないでください</h3>
+  <p>以前の資料で「タグが0個です」と申し上げましたが、<strong>これは優先順位を下げてください。</strong>公式ヘルプが、こう書いています。</p>
+  <div class="quoted" style="background:var(--surface-sunk);border-left-color:var(--ink-faint)">
+    <p class="qlabel" style="color:var(--ink-faint)">YouTube 公式ヘルプ</p>
+    <p>動画の検索時には、動画のタイトル、サムネイル、説明などのメタデータのほうが<strong>タグよりも重要な役割を果たします</strong>。（中略）タグは、スペルを間違えられやすいものが動画のコンテンツである場合に役に立つことがあります。<strong>その場合を除けば、動画の検索時にタグが果たす役割はごく小さなものです。</strong></p>
+  </div>
+  <p>「なかむら天風」のような書き方の違いを拾う目的でいくつか入れておく、その程度で十分です。同じ時間を、タイトルと、<strong>説明文の上のほうの数行</strong>にお使いください。そちらは公式が「視聴者の目に最初に留まる」と明言しています。</p>
+</section>
+
+<section>
+  <p class="eyebrow">もうひとつの道</p>
+  <h2>検索から人を送ることも、<br>結局は同じところにつながります</h2>
+  <p>先ほど申し上げたとおり、関連動画に出るかどうかは「一緒に見られているか」で決まります。<strong>ということは、検索から新しい方が来て、その方が公式チャンネルもご覧になれば、それも一票になります。</strong>入口を増やすことは、遠回りではありません。</p>
+
+  <p>公式チャンネルの全70本と、天風ラジオの全72本のタイトルを、言葉ごとに数えて突き合わせました。<strong>公式がよく使っているのに、天風ラジオのタイトルに一度も出てこない言葉</strong>があります。</p>
+
+  <div class="scroll">
+  <table class="d">
+    <tr><th>言葉</th><th class="n">公式70本中</th><th class="n">天風ラジオ72本中</th></tr>
+    <tr><td><strong>誦句</strong></td><td class="n">15本</td><td class="n">0本</td></tr>
+    <tr><td><strong>講演録</strong></td><td class="n">41本</td><td class="n">0本</td></tr>
+    <tr><td><strong>積極心</strong></td><td class="n">3本</td><td class="n">0本</td></tr>
+    <tr><td>心身統一法</td><td class="n">7本</td><td class="n">1本</td></tr>
+  </table>
+  </div>
+
+  <ul class="plain">
+    <li><b>「誦句」を、いちばんにお勧めします</b><span>公式チャンネルでいちばん見られている動画の上位に、「甦えりの誦句」（約11万回）と「力の誦句」（約8万回）が入っています。それなのに天風ラジオのタイトルには一度も出てきません。そしてYouTubeで「誦句」と検索してみますと、上に出てくるのは朗読を中心にしたチャンネルと、天風会公式の動画です。<strong>天風ラジオは1本も出てきません。</strong>タイトルにその言葉が無いのですから、当然です。この言葉で検索なさるのは、すでに天風先生を学んでおられる方です。</span></li>
+    <li><b>「心身統一法」は、「道」ではなく「法」に</b><span>#46が「心身統一道」になっています。公式も、検索する方も「法」です。一文字の違いで、まったく別の言葉として扱われます。</span></li>
+    <li><b>「積極」は、単独では使わないでください</b><span>調べて驚いたのですが、YouTubeで「積極」と検索すると、天風先生とまったく関係のないチャンネルが1位から10位まで埋めています。<strong>「積極心」「絶対積極」と続けてお使いください。</strong></span></li>
+    <li><b>実証ずみなのは「クンバハカ」です</b><span>#59が実際に検索の上位に入っています（実測で5〜8位のあいだを動いています）。固有の言葉ほど、上に出ます。「安定打坐」も同じ理由で有望です。</span></li>
   </ul>
 
   <div class="note">
-    <p><b>1と2が本命です。</b>一度設定すれば、公式チャンネルのトップに常に出続けます。3と4は、その補助とお考えください。</p>
-    <p>なお、これらは<b>すべて公式チャンネル側の操作</b>になります。公式チャンネルを管理されている方にお願いする必要があります。</p>
+    <p><b>ただし、中身と合わない言葉は入れないでください。</b>公式が明確に警告しています——「タイトルは動画の内容を正確に反映するものにしてください。そうでないと、視聴者が途中で視聴をやめ、動画の見つけやすさに影響する場合もあります」。そのお話で実際に触れておられる言葉だけをお使いください。</p>
   </div>
 </section>
 
 <section>
-  <p class="eyebrow">そして、ここがつながります</p>
-  <h2>視聴者を送ることが、関連動画への近道になります</h2>
-  <p>YouTubeの公式の説明に、こう書かれています。</p>
-  <div class="note">
-    <p>おすすめを決めるときの判断材料のひとつは、<b>「一緒に視聴されることの多い動画」</b>である。</p>
-  </div>
-  <p>つまり、<strong>同じ方が公式チャンネルの動画と天風ラジオの両方を見た、という実績が積み上がるほど、YouTubeは「この2つは近い」と判断するようになります。</strong></p>
-  <p>関連動画は設定では作れません。けれど<strong>上の1〜4で実際に視聴者を送ることが、そのまま関連動画に出るための土台になります。</strong>遠回りに見えて、これがいちばん確かな道です。</p>
-</section>
-
-<section>
-  <p class="eyebrow">あわせて</p>
-  <h2>タイトルに「中村天風」を入れることも、やはり効きます</h2>
-  <p>YouTubeは、どの動画とどの動画が近いかを判断するときに、<strong>タイトル・説明文に書かれている言葉</strong>を見ています。公式チャンネルの動画には「中村天風」という言葉が入っています。天風ラジオのタイトルに同じ言葉がなければ、結びつける手がかりがありません。</p>
-  <p>これが、先日お送りした資料に書いた話です。<strong>1〜4が「人を送る」道だとすれば、こちらは「言葉でつなぐ」道です。</strong>両方あると、いちばん効きます。</p>
-  <div class="note">
-    <p><b>タグについて、ひとつだけ。</b>YouTubeの公式ヘルプには <b>「動画の検索時には、動画のタイトル、サムネイル、説明などのメタデータのほうがタグよりも重要な役割を果たします」</b> と書かれています。タグに時間をかけるより、<b>タイトルと説明文</b>にお手間をかけていただくほうが確実です。</p>
-  </div>
+  <p class="eyebrow">まとめ</p>
+  <h2>お願いしたいのは、この3つです</h2>
+  <ul class="plain">
+    <li><b>1　公式チャンネルに、お願いをしてみていただく</b><span>「共同編集者としての招待」「終了画面に1枚」「ホームに再生リスト」。文案は上に用意いたしました。関連動画に並ぶ道は、突き詰めるとここにしかありません。</span></li>
+    <li><b>2　#65の「てきる」を直していただく</b><span>手順は上のとおりです。5分かかりません。</span></li>
+    <li><b>3　これからのタイトルに「誦句」を試していただく</b><span>公式が15本使っていて、天風ラジオには0本。いちばん空いている入口です。</span></li>
+  </ul>
+  <p>絵文字が残る10本と再生リストは、お手隙のときで構いません。<strong>急ぐ必要のあるものは、上の3つだけです。</strong></p>
+  <p>残りの回のタイトル案や、お願いの文面の書き直しなど、ご入用のものがございましたら何なりとお申し付けください。</p>
 </section>
 
 <footer>
-  <p>本資料の手順と条件は、2026年9月24日時点のYouTube公式ヘルプおよび公式ブログの記載に基づいています。「関連動画を指定する機能は存在しない」という点は、公式の機能一覧に該当するものが無いことを確認したうえで記しました。画面の名称は今後のYouTubeの更新により変わることがあります。</p>
+  <p>2026年9月24日作成。手順・条件・数値は、同日時点のYouTube公式ヘルプおよびYouTube公式の説明ページに基づいています。画面の名称は今後変わることがあります。</p>
+  <p>主な出典：YouTube公式ヘルプ「動画の設定を編集する」「YouTube 動画にタグを追加する」「動画の説明に関するヒント」「サムネイルとタイトルに関するヒント」「動画に終了画面を追加する」「動画に情報カードを追加する」「動画に共同編集者を招待する」「チャンネルのレイアウトをカスタマイズする」「YouTube Studio で再生リストを管理する」「YouTube のおすすめ動画の仕組み」「YouTube のおすすめシステム」「YouTube 検索の仕組み」「YouTube の検索結果に自分のチャンネルまたは動画が表示されない理由」。</p>
+  <p>チャンネルの数値は2026年9月24日に公開ページから実測したものです（天風ラジオ72本、公式チャンネル70本）。検索順位は同日時点のもので、日々変動します。</p>
 </footer>
 
 </div>
+
+</body>
+</html>
