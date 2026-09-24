@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>公式チャンネルの隣に並ぶには</title>
+<meta name="description" content="「タイトルの付け方を変える」「絵文字を外す」とは具体的に何を指すのか。天風ラジオの実際のタイトルでご説明します。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="公式チャンネルの隣に並ぶには">
+<meta property="og:description" content="関連動画はこちらから指定できません。では、どうすれば公式チャンネルの視聴者に届くのか。">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#FAFAF9; --surface:#FFFFFF; --surface-sunk:#F2F3F5;
+  --ink:#151C2C; --ink-soft:#4B5770; --ink-faint:#7C879C;
+  --rule:#E0E4EA; --rule-strong:#C8CFDA;
+  --ai:#1F4E79; --ai-soft:#E9F0F7;
+  --shu:#B33D14; --shu-soft:#FBEBE4;
+  --matsu:#39634A; --matsu-soft:#E8F0EA;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#10141C; --surface:#161B25; --surface-sunk:#1C222E;
+    --ink:#E9ECF2; --ink-soft:#A9B3C5; --ink-faint:#768097;
+    --rule:#28303D; --rule-strong:#3A4454;
+    --ai:#8CB8E2; --ai-soft:#182534;
+    --shu:#E8977A; --shu-soft:#2D1A12;
+    --matsu:#84BB92; --matsu-soft:#152319;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#10141C; --surface:#161B25; --surface-sunk:#1C222E;
+  --ink:#E9ECF2; --ink-soft:#A9B3C5; --ink-faint:#768097;
+  --rule:#28303D; --rule-strong:#3A4454;
+  --ai:#8CB8E2; --ai-soft:#182534;
+  --shu:#E8977A; --shu-soft:#2D1A12;
+  --matsu:#84BB92; --matsu-soft:#152319;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-body);
+  font-size:17px;line-height:1.95;margin:0;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px 120px}
+section{padding-top:64px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);
+  margin:0 0 12px;display:flex;align-items:center;gap:9px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(27px,5.4vw,38px);
+  line-height:1.45;margin:0 0 18px;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(23px,3.6vw,29px);
+  line-height:1.5;margin:0 0 20px;text-wrap:balance;letter-spacing:.01em}
+h3{font-size:17px;font-weight:700;margin:36px 0 12px;color:var(--ink)}
+p{margin:0 0 18px}
+strong{font-weight:700}
+a{color:var(--ai)}
+
+header.top{padding:60px 0 0;border-bottom:1px solid var(--rule-strong);padding-bottom:34px}
+.lede{color:var(--ink-soft);font-size:16px;margin:0}
+
+/* 質問カード */
+.q{background:var(--surface);border:1px solid var(--rule);
+   border-left:3px solid var(--ai);padding:20px 22px;margin:0 0 30px}
+.q .qlabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--ai);margin:0 0 8px}
+.q p{margin:0;font-size:16px;color:var(--ink-soft)}
+.q .said{font-family:var(--f-display);font-size:19px;color:var(--ink);font-weight:500;margin:0}
+
+/* 答え */
+.answer{background:var(--ai-soft);border:1px solid var(--rule);padding:20px 22px;margin:0 0 30px}
+.answer p{margin:0;font-size:17px}
+.answer p+p{margin-top:12px}
+
+/* タイトル実例 */
+.ex{border:1px solid var(--rule);background:var(--surface);margin:0 0 16px}
+.ex .row{display:grid;grid-template-columns:52px 1fr;gap:0 14px;padding:14px 18px;align-items:start}
+.ex .row+.row{border-top:1px solid var(--rule)}
+.ex .tag{font-size:11px;font-weight:700;letter-spacing:.08em;padding-top:5px}
+.ex .now .tag{color:var(--ink-faint)}
+.ex .new .tag{color:var(--matsu)}
+.ex .new{background:var(--matsu-soft)}
+.ttl{font-family:var(--f-display);font-size:19px;line-height:1.65;word-break:break-all;margin:0}
+.ex .now .ttl{color:var(--ink-soft)}
+.why{font-size:14px;color:var(--ink-soft);margin:6px 0 0;line-height:1.75}
+mark.kw{background:transparent;color:var(--matsu);font-weight:700;
+  border-bottom:2px solid var(--matsu);padding-bottom:1px}
+mark.em{background:var(--shu-soft);color:var(--shu);font-weight:700;padding:0 3px;border-radius:2px}
+
+/* 絵文字の現物 */
+.glyphs{display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);
+  background:var(--surface);margin:0 0 24px}
+.glyph{display:grid;grid-template-columns:104px 1fr;gap:0 20px;padding:20px;align-items:center}
+.glyph>div:last-child{min-width:0}
+.glyph+.glyph{border-top:1px solid var(--rule)}
+.big{font-size:44px;line-height:1.15;text-align:center;font-family:var(--f-display);
+  min-width:0;overflow:hidden;word-break:keep-all}
+.big.two{font-size:30px;letter-spacing:.04em}
+.egline{display:block;margin-top:12px;padding:12px 14px;background:var(--surface-sunk,#F2F3F5);
+  border-radius:3px;font-size:13.5px;line-height:1.75}
+.egrow{display:grid;grid-template-columns:44px 1fr;gap:0 10px;align-items:baseline}
+.egrow+.egrow{margin-top:6px}
+.eglbl{font-size:11.5px;font-weight:700;color:var(--ink-faint,#7C879C);letter-spacing:.06em}
+.bad .big{color:var(--shu)}
+.ok .big{color:var(--matsu)}
+.gname{font-weight:700;font-size:16px;margin:0 0 3px}
+.gwhere{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.7}
+.verdict{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  padding:2px 8px;border-radius:2px;margin-left:8px;vertical-align:2px}
+.bad .verdict{background:var(--shu-soft);color:var(--shu)}
+.ok .verdict{background:var(--matsu-soft);color:var(--matsu)}
+
+.note{background:var(--surface-sunk);border:1px solid var(--rule);padding:18px 20px;margin:24px 0}
+.note p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.85}
+.note p+p{margin-top:10px}
+.note b{color:var(--ink)}
+
+ul.rules{list-style:none;padding:0;margin:0}
+ul.rules li{border-top:1px solid var(--rule);padding:14px 0;display:grid;
+  grid-template-columns:26px 1fr;gap:0 12px}
+ul.rules li:last-child{border-bottom:1px solid var(--rule)}
+ul.rules .n{color:var(--ai);font-weight:700;font-family:var(--f-display);font-size:18px}
+ul.rules>li>div>b:first-child{display:block;margin-bottom:2px}
+ul.rules span b{display:inline;font-weight:700;color:var(--ink);
+  background:var(--surface-sunk,#F2F3F5);padding:1px 5px;border-radius:2px;white-space:nowrap}
+ul.rules span{font-size:15px;color:var(--ink-soft);line-height:1.8}
+
+.praise{border:1px solid var(--rule);border-top:3px solid var(--matsu);
+  background:var(--matsu-soft);padding:20px 22px;margin:28px 0}
+.praise h3{margin:0 0 10px;color:var(--matsu)}
+.praise p{margin:0;font-size:16px}
+.praise .sample{font-family:var(--f-display);font-size:18px;margin:12px 0 0;color:var(--ink)}
+
+
+.pair{border:1px solid var(--rule);background:var(--surface);margin:0 0 18px}
+.pair .line{display:grid;grid-template-columns:104px 1fr;gap:0 14px;padding:13px 18px;align-items:baseline}
+.pair .now{background:var(--surface-sunk)}
+.pair .now .lb{color:var(--ink-faint)}
+.pair .now .val{color:var(--ink-soft);font-size:17px}
+@media(max-width:480px){.pair .line{grid-template-columns:1fr;gap:4px 0}}
+.pair .line+.line{border-top:1px solid var(--rule)}
+.pair .lb{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--ai)}
+.pair .val{font-family:var(--f-display);font-size:18px;line-height:1.6;word-break:break-all;margin:0}
+.pair .cnt{font-size:12.5px;color:var(--ink-faint);margin-left:6px;font-family:var(--f-body)}
+.pair .thumb .val{font-size:26px;font-weight:700;letter-spacing:.04em}
+.pair .thumb{background:var(--matsu-soft)}
+.pair .thumb .lb{color:var(--matsu)}
+
+.point{border:1px solid var(--rule);background:var(--surface);padding:24px 20px;margin:0 0 26px;text-align:center}
+.point .ttlline{font-family:var(--f-display);font-size:clamp(19px,4.4vw,25px);line-height:1.5;margin:0;word-break:break-all}
+.point .hl{color:var(--matsu);font-weight:700;border-bottom:4px solid var(--matsu);padding-bottom:3px}
+.point .arrow{color:var(--matsu);font-size:20px;margin:10px 0 4px;line-height:1}
+.point .cap{font-size:15px;color:var(--matsu);font-weight:700;margin:0}
+.point .sub{font-size:14px;color:var(--ink-soft);margin:14px 0 0;line-height:1.8}
+footer{margin-top:70px;padding-top:24px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink-faint);line-height:1.8}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="kicker">村里やすゆき天風ラジオ ／ ご質問へのお答え</p>
+  <h1>公式チャンネルの隣に<br>並ぶには</h1>
+  <p class="standfirst">先日お送りした資料のうち、「関連動画として並べません」と書いた部分についてのご質問をいただきました。結論から申し上げますと、<strong>関連動画そのものは、こちらから指定できません。</strong>ただ、それを待たずに確実に並べる方法があります。</p>
+  <div class="meta"><span>2026年9月24日</span><span>作成 <b>佐々木</b></span></div>
+</header>
+
+<section>
+  <p class="eyebrow">まず、正直なところ</p>
+  <h2>関連動画は、YouTubeが決めています</h2>
+  <p>「この動画の隣に、あの動画を出してください」という設定は、<strong>YouTubeには存在しません。</strong>投稿する側から指定することはできません。</p>
+  <p>YouTubeの公式の説明では、次に出す動画は<strong>視聴者ひとりひとりの視聴履歴・検索履歴・チャンネル登録・高評価</strong>などから決めている、とされています。つまり<strong>視聴者の側の動き</strong>で決まっていて、投稿者が触れる場所ではありません。</p>
+  <div class="note">
+    <p><b>お約束できないことは、できないとお伝えします。</b>「関連動画に出るようにします」と言い切れる方法は存在しません。世の中にはそう謳う情報もありますが、公式の裏づけはありませんでした。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">では、どうするか</p>
+  <h2>関連動画を待たずに、並べる方法があります</h2>
+  <p>公式チャンネル側の設定で、天風ラジオへの入口を作れます。<strong>どれもYouTubeにもとから付いている機能で、新しく何かを作る必要はありません。</strong>設定したその日から並びます。</p>
+
+  <ul class="rules">
+    <li><span class="n">1</span><div>
+      <b>公式チャンネルのホームに「注目チャンネル」として載せる</b>
+      <span>公式チャンネルのトップページに、天風ラジオが常に並びます。いちばん目立ちます。<br>
+      <span class="egline"><span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［カスタマイズ］→［ホームタブ］→［セクションを追加］→［チャンネル］</span></span></span>
+    </div></li>
+    <li><span class="n">2</span><div>
+      <b>公式チャンネルに、天風ラジオの再生リストを置く</b>
+      <span>他のチャンネルの公開動画を、自分の再生リストに入れることができます。公式チャンネルのページに、天風ラジオの動画そのものが並ぶ形になります。<br>
+      <span class="egline">
+        <span class="egrow"><span class="eglbl">1</span>天風ラジオの動画を開き、動画の下の［…］→［保存］→［新しい再生リストを作成］</span>
+        <span class="egrow"><span class="eglbl">2</span>名前を付けて、公開設定を［公開］にして［作成］</span>
+        <span class="egrow"><span class="eglbl">3</span>YouTube Studio →［カスタマイズ］→［ホームタブ］→［セクションを追加］→［再生リスト］</span>
+      </span></span>
+    </div></li>
+    <li><span class="n">3</span><div>
+      <b>動画の最後に出る「終了画面」から</b>
+      <span>公式の動画を見終えた方に、天風ラジオをご案内できます。見終えた直後は、いちばん次へ進みやすい瞬間です。<br>
+      <span class="egline">
+        <span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［コンテンツ］→ 動画を選ぶ →［エディタ］→［終了画面］→［チャンネル］</span>
+        <span class="egrow"><span class="eglbl">条件</span>動画が25秒以上あること。要素は4つまで</span>
+      </span></span>
+    </div></li>
+    <li><span class="n">4</span><div>
+      <b>公式の動画の概要欄に、リンクを1行</b>
+      <span>いちばん手軽で、条件もありません。<strong>過去の動画にも入れられます。</strong><br>
+      <span class="egline"><span class="egrow"><span class="eglbl">手順</span>YouTube Studio →［コンテンツ］→ 動画を選ぶ →［説明］にURLを貼って［保存］</span></span></span>
+    </div></li>
+  </ul>
+
+  <div class="note">
+    <p><b>1と2が本命です。</b>一度設定すれば、公式チャンネルのトップに常に出続けます。3と4は、その補助とお考えください。</p>
+    <p>なお、これらは<b>すべて公式チャンネル側の操作</b>になります。公式チャンネルを管理されている方にお願いする必要があります。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">そして、ここがつながります</p>
+  <h2>視聴者を送ることが、関連動画への近道になります</h2>
+  <p>YouTubeの公式の説明に、こう書かれています。</p>
+  <div class="note">
+    <p>おすすめを決めるときの判断材料のひとつは、<b>「一緒に視聴されることの多い動画」</b>である。</p>
+  </div>
+  <p>つまり、<strong>同じ方が公式チャンネルの動画と天風ラジオの両方を見た、という実績が積み上がるほど、YouTubeは「この2つは近い」と判断するようになります。</strong></p>
+  <p>関連動画は設定では作れません。けれど<strong>上の1〜4で実際に視聴者を送ることが、そのまま関連動画に出るための土台になります。</strong>遠回りに見えて、これがいちばん確かな道です。</p>
+</section>
+
+<section>
+  <p class="eyebrow">あわせて</p>
+  <h2>タイトルに「中村天風」を入れることも、やはり効きます</h2>
+  <p>YouTubeは、どの動画とどの動画が近いかを判断するときに、<strong>タイトル・説明文に書かれている言葉</strong>を見ています。公式チャンネルの動画には「中村天風」という言葉が入っています。天風ラジオのタイトルに同じ言葉がなければ、結びつける手がかりがありません。</p>
+  <p>これが、先日お送りした資料に書いた話です。<strong>1〜4が「人を送る」道だとすれば、こちらは「言葉でつなぐ」道です。</strong>両方あると、いちばん効きます。</p>
+  <div class="note">
+    <p><b>タグについて、ひとつだけ。</b>YouTubeの公式ヘルプには <b>「動画の検索時には、動画のタイトル、サムネイル、説明などのメタデータのほうがタグよりも重要な役割を果たします」</b> と書かれています。タグに時間をかけるより、<b>タイトルと説明文</b>にお手間をかけていただくほうが確実です。</p>
+  </div>
+</section>
+
+<footer>
+  <p>本資料の手順と条件は、2026年9月24日時点のYouTube公式ヘルプおよび公式ブログの記載に基づいています。「関連動画を指定する機能は存在しない」という点は、公式の機能一覧に該当するものが無いことを確認したうえで記しました。画面の名称は今後のYouTubeの更新により変わることがあります。</p>
+</footer>
+
+</div>
