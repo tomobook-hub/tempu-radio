@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>見てくださった方を、次へつなぐ</title>
+<meta name="description" content="概要欄の3行と、終了画面。そして第71話のお願い。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="見てくださった方を、次へつなぐ">
+<meta property="og:description" content="概要欄の3行と、終了画面。そして第71話のお願い。">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#FAFAF9; --surface:#FFFFFF; --surface-sunk:#F2F3F5;
+  --ink:#151C2C; --ink-soft:#4B5770; --ink-faint:#7C879C;
+  --rule:#E0E4EA; --rule-strong:#C8CFDA;
+  --ai:#1F4E79; --ai-soft:#E9F0F7;
+  --shu:#B33D14; --shu-soft:#FBEBE4;
+  --matsu:#39634A; --matsu-soft:#E8F0EA;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --f-mono:"SFMono-Regular",Menlo,Consolas,"Hiragino Sans",monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#10141C; --surface:#161B25; --surface-sunk:#1C222E;
+    --ink:#E9ECF2; --ink-soft:#A9B3C5; --ink-faint:#768097;
+    --rule:#28303D; --rule-strong:#3A4454;
+    --ai:#8CB8E2; --ai-soft:#182534;
+    --shu:#E8977A; --shu-soft:#2D1A12;
+    --matsu:#84BB92; --matsu-soft:#152319;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#10141C; --surface:#161B25; --surface-sunk:#1C222E;
+  --ink:#E9ECF2; --ink-soft:#A9B3C5; --ink-faint:#768097;
+  --rule:#28303D; --rule-strong:#3A4454;
+  --ai:#8CB8E2; --ai-soft:#182534;
+  --shu:#E8977A; --shu-soft:#2D1A12;
+  --matsu:#84BB92; --matsu-soft:#152319;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-body);
+  font-size:17px;line-height:1.95;margin:0;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px 120px}
+section{padding-top:64px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin:0 0 12px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,5.6vw,40px);
+  line-height:1.4;margin:0 0 20px;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(23px,3.6vw,29px);
+  line-height:1.5;margin:0 0 20px;text-wrap:balance;letter-spacing:.01em}
+h3{font-size:17px;font-weight:700;margin:36px 0 12px;color:var(--ink)}
+p{margin:0 0 18px}
+strong{font-weight:700}
+a{color:var(--ai);word-break:break-all}
+code{font-family:var(--f-body);background:var(--surface-sunk);
+  padding:1px 6px;border-radius:2px;font-size:15px;color:var(--ink);
+  white-space:nowrap;display:inline-block}
+
+header.masthead{padding:60px 0 34px;border-bottom:1px solid var(--rule-strong)}
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--ai);margin:0 0 16px}
+.standfirst{color:var(--ink-soft);font-size:16.5px;margin:0 0 22px;line-height:1.9}
+.meta{display:flex;flex-wrap:wrap;gap:0 20px;font-size:13px;color:var(--ink-faint)}
+.meta b{color:var(--ink-soft)}
+
+.note{background:var(--surface-sunk);border:1px solid var(--rule);padding:18px 20px;margin:24px 0}
+.note p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.85}
+.note p+p{margin-top:10px}
+.note b{color:var(--ink)}
+
+.answer{background:var(--ai-soft);border:1px solid var(--rule);padding:20px 22px;margin:0 0 28px}
+.answer p{margin:0;font-size:17px}
+.answer p+p{margin-top:12px}
+
+/* 概要欄テンプレ */
+.tpl{border:1px solid var(--rule-strong);background:var(--surface);margin:0 0 18px}
+.tpl .thead{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--ai);
+  padding:14px 20px;border-bottom:1px solid var(--rule);background:var(--surface-sunk)}
+.tpl pre{margin:0;padding:20px;font-family:var(--f-mono);font-size:13.5px;line-height:2;
+  white-space:pre-wrap;word-break:break-all;color:var(--ink)}
+
+/* 手順 */
+ol.steps{list-style:none;padding:0;margin:0 0 24px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:0 14px;
+  padding:16px 0;border-top:1px solid var(--rule)}
+ol.steps li:last-child{border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s);font-family:var(--f-display);font-weight:700;
+  font-size:19px;color:var(--ai);line-height:1.5}
+ol.steps li div{min-width:0}
+ol.steps b{display:block;font-size:16.5px;margin-bottom:3px}
+ol.steps span{font-size:15px;color:var(--ink-soft);line-height:1.8}
+
+ul.plain{list-style:none;padding:0;margin:0 0 22px}
+ul.plain li{border-top:1px solid var(--rule);padding:14px 0;font-size:16px;line-height:1.85}
+ul.plain li:last-child{border-bottom:1px solid var(--rule)}
+ul.plain b{display:block;margin-bottom:2px}
+ul.plain span{font-size:15px;color:var(--ink-soft)}
+
+/* 企画一覧の見本 */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.d{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 14px;background:var(--surface)}
+table.d th,table.d td{border:1px solid var(--rule);padding:10px 12px;text-align:left;line-height:1.7;vertical-align:top}
+table.d th{background:var(--surface-sunk);font-size:12.5px;font-weight:700;color:var(--ink-soft);
+  letter-spacing:.04em;white-space:nowrap}
+
+footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-faint);line-height:1.85}
+footer p{margin:0 0 12px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="kicker">村里やすゆき天風ラジオ ／ 次のご提案</p>
+  <h1>見てくださった方を、<br>次へつなぐ</h1>
+  <p class="standfirst">チャンネルの説明文を入れてくださいました。<strong>入口が整いましたので、次は「見終えた方を、どこへお連れするか」です。</strong>お手元で、すぐにできることを二つと、お願いをひとつ書かせていただきました。</p>
+  <div class="meta"><span>2026年9月26日</span><span>作成 <b>佐々木</b></span></div>
+</header>
+
+<section>
+  <p class="eyebrow">はじめに</p>
+  <h2>説明文、拝見しました</h2>
+  <p>天風会のサイトを調べてみたのですが、天風塾のページには「◆村里教室」と姓だけで、お写真もご経歴もありませんでした。認定講師を紹介するページも見当たりません。</p>
+  <p>つまり<strong>あの説明文は、いまインターネット上で村里先生という方がわかる、ほとんど唯一の場所になっています。</strong>入口としては、これで十分だと思います。</p>
+</section>
+
+<section>
+  <p class="eyebrow">ここから</p>
+  <h2>概要欄に、3行を足しませんか</h2>
+
+  <p>直近の回を拝見しますと、概要欄の本文はどれもしっかり書かれています。<strong>ただ、リンクが一本も入っておりません。</strong></p>
+
+  <p>いまの天風ラジオは、見終えた方の行き先がない状態です。お話に心を動かされた方が「もっと知りたい」と思っても、<strong>その先がどこにも書かれていません。</strong></p>
+
+  <div class="answer">
+    <p><strong>本文はそのままで結構です。</strong>いちばん下に、次の3行を足していただくだけです。</p>
+  </div>
+
+  <div class="tpl">
+    <p class="thead">概要欄のいちばん下に貼るもの</p>
+<pre>───────────────
+
+▶ 天風塾【村里教室】
+　毎月第2火曜日 15:00〜17:00／天風会館
+　https://www.tempukai.or.jp/seminar/tempu_juku
+
+▶ 中村天風財団（天風会）公式チャンネル
+　https://www.youtube.com/@tempukai_youtube
+
+▶ 天風会について・入会のご案内
+　https://www.tempukai.or.jp/fellow
+
+───────────────</pre>
+  </div>
+
+  <p>一度どこかに控えておいて、<strong>毎回コピーして貼るだけ</strong>です。文面を考え直す必要はありません。</p>
+
+  <h3>なぜ、この3つなのか</h3>
+  <ul class="plain">
+    <li><b>天風塾【村里教室】</b><span>テーマが「人生は有難うを探す旅」——<strong>チャンネルの説明文の最後に書いておられる、あの言葉と同じです。</strong>ラジオを聴いた方が、先生に実際にお会いできる唯一の場所でもあります。会員でなくても受講できると書かれていましたので、初めての方にも案内できます。</span></li>
+    <li><b>天風会公式チャンネル</b><span>公式チャンネルと天風ラジオは、いま<strong>片方向でしかつながっていません。</strong>先生のチャンネルから公式の動画へは1本リンクがありますが、逆は一つもありません。こちらから先に通しておけば、公式へお願いするときにも「こちらはもう案内しております」と申し上げられます。</span></li>
+    <li><b>天風会への入会案内</b><span>毎週聴いてくださる方が増えるほど、「入ってみようか」と思われる方が出てきます。そのときに行き先が書かれていないのは、もったいないと思います。</span></li>
+  </ul>
+
+  <div class="note">
+    <p><b>過去の72本に遡る必要はありません。</b>新しい回から始めていただいて、古い回はいつかお手隙のときで十分です。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">もうひとつ</p>
+  <h2>終了画面で、次の回へ</h2>
+
+  <p>動画の最後に出る、あの案内です。直近の回を拝見したところ、<strong>まだ設定されていないようでした。</strong></p>
+
+  <p>いまは動画が終わると、YouTubeが勝手に選んだ動画が並びます。そこに<strong>先生が選んだ回を置ける</strong>のが終了画面です。「この話を聴いた方には、次にこれを」と、先生のほうで決められます。</p>
+
+  <ol class="steps">
+    <li><div><b><code>［コンテンツ］</code>から動画を開く</b><span>いつもタイトルを直しておられる、あの画面です。</span></div></li>
+    <li><div><b>左のタブから <code>［エディタ］</code></b><span>「詳細」「アナリティクス」…と並んでいる中の一つです。</span></div></li>
+    <li><div><b><code>［終了画面］</code> を選び、置きたい動画を指定</b><span>ご自分の回でも、他のチャンネルの動画でも置けます。</span></div></li>
+    <li><div><b><code>［保存］</code></b><span>動画が25秒以上あれば使えます。置ける要素は4つまでです。</span></div></li>
+  </ol>
+
+  <p>ひとつだけ置くなら、<strong>その回と話がつながっている回</strong>がよいと思います。たとえば「天の声を聴く（その1）」の最後に「（その2）」を置く、というふうに。</p>
+</section>
+
+<section>
+  <p class="eyebrow">もしまだでしたら</p>
+  <h2>次に何を話すかを、先に決めておく</h2>
+
+  <p>すでにお作りでしたら、この項は読み飛ばしてください。</p>
+
+  <p>もしまだでしたら、<strong>数回先まで「何を話すか」を決めた一覧</strong>があると、回ごとのつながりが出てくると思います。</p>
+
+  <p>数字を見ていて気づいたことがあります。<strong>伸びているのは、続きもののお話です。</strong>「悟りへの道」の第一話は2,500回を超えています。「天の声を聴く」も、その1・その2と続けておられます。ばらばらの単発より、続きもののほうが明らかに見られています。</p>
+
+  <p>先に決めておくと、続きものが組み立てやすくなります。あわせて、<strong>私のほうでもサムネイルの文言やタイトルを、録音を待つあいだに考えておけます。</strong>いまは動画ができあがってから私が拝見しているので、どうしても後追いになってしまいます。</p>
+
+  <div class="scroll">
+  <table class="d">
+    <tr><th>回</th><th>話すこと</th><th>タイトル案</th><th>サムネ文言</th></tr>
+    <tr><td>#71</td><td>（テーマ）</td><td>（　）</td><td>（　）</td></tr>
+    <tr><td>#72</td><td>（テーマ）</td><td>（　）</td><td>（　）</td></tr>
+    <tr><td>#73</td><td>（テーマ）</td><td>（　）</td><td>（　）</td></tr>
+  </table>
+  </div>
+  <p>このくらい簡単なもので十分だと思います。テーマだけ決まっていれば、タイトルとサムネ文言は私のほうで案をお出しできます。</p>
+
+  <div class="note">
+    <p><b>もちろん、先生が話したいことが最優先です。</b>32年学んでこられた先生に、こちらから中身を決めるようなことは申し上げません。あくまで、決まっていることを書き留めておくための表としてお考えください。</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">お願い</p>
+  <h2>第71話の音源と台本を、<br>お預かりできませんでしょうか</h2>
+
+  <p>テロップのことです。毎週となると、これはご負担が大きすぎると思います。</p>
+
+  <p>ただ、あらためて何本か拝見していて、<strong>やはりテロップはあったほうがよいと感じました。</strong>耳で聴くだけよりも、文字が出ているほうが、何をおっしゃっているかがはっきり伝わります。天風哲学の言葉には、耳だけでは受け取りにくいものもありますので。</p>
+
+  <div class="answer">
+    <p><strong>そこで、もしよろしければ——第71話の音源と台本を、お預かりできませんでしょうか。</strong></p>
+    <p>私のほうで一度テロップを入れてみて、お見せしたいのです。お手元にあるものを、そのままで結構です。</p>
+  </div>
+
+  <p>正直に申しますと、<strong>うまくできるかどうか、まだ私にもわかりません。</strong>10分ほどのお話でしたら、そう難しくないのではないかと思っているのですが、やってみないことには何とも申し上げられません。</p>
+
+  <p>できあがりを見ていただいて、<strong>これは違うと思われたら、それで結構です。</strong>お送りいただくのは、ご都合のよいときで構いません。</p>
+</section>
+
+<footer>
+  <p>2026年9月26日作成。手順と条件は、同日時点のYouTube公式ヘルプに基づいています。画面の名称は今後変わることがあります。</p>
+  <p>天風塾【村里教室】の日程・会場は、天風会公式サイトの記載によります。チャンネルの状態は2026年9月26日に公開ページで確かめたものです。</p>
+</footer>
+
+</div>
+
+</body>
+</html>
